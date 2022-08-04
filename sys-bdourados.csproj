@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,16 +49,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="01-Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="01-Login.Designer.cs">
+      <DependentUpon>01-Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02-Painel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02-Painel.Designer.cs">
+      <DependentUpon>02-Painel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="variaveis.cs" />
+    <EmbeddedResource Include="01-Login.resx">
+      <DependentUpon>01-Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02-Painel.resx">
+      <DependentUpon>02-Painel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,6 +78,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +92,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\favicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
