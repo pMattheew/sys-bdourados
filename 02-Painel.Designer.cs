@@ -28,24 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.close = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblFundo = new System.Windows.Forms.Label();
+            this.minimize = new System.Windows.Forms.PictureBox();
+            this.close = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             this.SuspendLayout();
-            // 
-            // close
-            // 
-            this.close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.close.Image = global::sys_bdourados.Properties.Resources.close;
-            this.close.Location = new System.Drawing.Point(973, 3);
-            this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(24, 24);
-            this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.close.TabIndex = 7;
-            this.close.TabStop = false;
-            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // lblTitulo
             // 
@@ -67,19 +56,47 @@
             this.lblFundo.Size = new System.Drawing.Size(1000, 570);
             this.lblFundo.TabIndex = 8;
             // 
+            // minimize
+            // 
+            this.minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.minimize.Image = global::sys_bdourados.Properties.Resources.minimize;
+            this.minimize.Location = new System.Drawing.Point(948, 4);
+            this.minimize.Name = "minimize";
+            this.minimize.Size = new System.Drawing.Size(22, 22);
+            this.minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.minimize.TabIndex = 9;
+            this.minimize.TabStop = false;
+            this.minimize.Click += new System.EventHandler(this.minimize_Click);
+            // 
+            // close
+            // 
+            this.close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.close.Image = global::sys_bdourados.Properties.Resources.close;
+            this.close.Location = new System.Drawing.Point(974, 4);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(22, 22);
+            this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.close.TabIndex = 10;
+            this.close.TabStop = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
             // frmPainel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
-            this.Controls.Add(this.lblFundo);
+            this.Controls.Add(this.minimize);
             this.Controls.Add(this.close);
+            this.Controls.Add(this.lblFundo);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPainel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DouradosSys | Painel";
+            ((System.ComponentModel.ISupportInitialize)(this.minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -87,9 +104,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox close;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblFundo;
+        private System.Windows.Forms.PictureBox minimize;
+        private System.Windows.Forms.PictureBox close;
     }
 }

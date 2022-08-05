@@ -21,13 +21,17 @@ namespace sys_bdourados
         {
             Application.Exit();
         }
+        private void minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
-       /*     if(input.Text == "")
+           if(input.Text == "")
             {
                 lblAviso.Text = "Insira um email válido";
-            }*/
+            }
         }
 
         private void btnAvancar_Click(object sender, EventArgs e)
@@ -40,6 +44,7 @@ namespace sys_bdourados
             {
 
                 input.Clear();
+
                 lblInput.Text = "Senha:";
                 input.PasswordChar = '*';
                 btnAvancar.Text = "Acessar";
@@ -52,5 +57,6 @@ namespace sys_bdourados
                 Hide();
             }
         }
+
     }
 }

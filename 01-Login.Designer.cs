@@ -36,8 +36,10 @@
             this.btnAvancar = new System.Windows.Forms.Button();
             this.lblAviso = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.minimize = new System.Windows.Forms.PictureBox();
             this.close = new System.Windows.Forms.PictureBox();
             this.picAvatar = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.SuspendLayout();
@@ -120,14 +122,27 @@
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "Login";
             // 
+            // minimize
+            // 
+            this.minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.minimize.Image = global::sys_bdourados.Properties.Resources.minimize;
+            this.minimize.Location = new System.Drawing.Point(407, 4);
+            this.minimize.Name = "minimize";
+            this.minimize.Size = new System.Drawing.Size(22, 22);
+            this.minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.minimize.TabIndex = 5;
+            this.minimize.TabStop = false;
+            this.minimize.Click += new System.EventHandler(this.minimize_Click);
+            // 
             // close
             // 
             this.close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.close.Image = global::sys_bdourados.Properties.Resources.close;
-            this.close.Location = new System.Drawing.Point(434, 3);
+            this.close.Location = new System.Drawing.Point(433, 4);
             this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(24, 24);
+            this.close.Size = new System.Drawing.Size(22, 22);
             this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.close.TabIndex = 5;
             this.close.TabStop = false;
@@ -150,6 +165,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(460, 600);
+            this.Controls.Add(this.minimize);
             this.Controls.Add(this.close);
             this.Controls.Add(this.picAvatar);
             this.Controls.Add(this.btnAvancar);
@@ -164,6 +180,7 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DouradosSys | Login";
+            ((System.ComponentModel.ISupportInitialize)(this.minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.ResumeLayout(false);
@@ -182,6 +199,7 @@
         private System.Windows.Forms.PictureBox close;
         private System.Windows.Forms.Label lblAviso;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.PictureBox minimize;
     }
 }
 
