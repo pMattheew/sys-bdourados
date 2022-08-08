@@ -26,5 +26,23 @@ namespace sys_bdourados
         {
             Application.Exit();
         }
+
+        private void picSair_Click(object sender, EventArgs e)
+        {
+            new frmLogin().Show();
+            Close();
+        }
+
+        private void lblSair_Click(object sender, EventArgs e)
+        {
+            new frmLogin().Show();
+            Close();
+        }
+
+        private void lblSairFundo_Click(object sender, EventArgs e)
+        {
+            new frmLogin().Show();
+            Close();
+        }
     }
 }

@@ -104,6 +104,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="img\logoutR.png" />
+    <None Include="img\teste2faq.png" />
+    <None Include="img\testeFaq.png" />
+    <None Include="img\logout.png" />
+    <None Include="img\faq.png" />
     <None Include="img\minimize.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
