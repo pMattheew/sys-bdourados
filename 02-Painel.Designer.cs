@@ -43,6 +43,20 @@
             this.picPerfil = new System.Windows.Forms.PictureBox();
             this.minimize = new System.Windows.Forms.PictureBox();
             this.close = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnDB1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnDB2 = new System.Windows.Forms.Button();
+            this.btnDB3 = new System.Windows.Forms.Button();
+            this.btnDB4 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnWeb1 = new System.Windows.Forms.Button();
+            this.btnWeb2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -209,12 +223,197 @@
             this.close.TabStop = false;
             this.close.Click += new System.EventHandler(this.close_Click);
             // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.label2.Location = new System.Drawing.Point(454, 50);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(230, 250);
+            this.label2.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.label3.Location = new System.Drawing.Point(200, 50);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(230, 250);
+            this.label3.TabIndex = 13;
+            // 
+            // btnDB1
+            // 
+            this.btnDB1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.btnDB1.FlatAppearance.BorderSize = 0;
+            this.btnDB1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDB1.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.btnDB1.ForeColor = System.Drawing.Color.White;
+            this.btnDB1.Location = new System.Drawing.Point(469, 92);
+            this.btnDB1.Name = "btnDB1";
+            this.btnDB1.Size = new System.Drawing.Size(200, 30);
+            this.btnDB1.TabIndex = 14;
+            this.btnDB1.Text = "Gerenciar funcionários";
+            this.btnDB1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDB1.UseVisualStyleBackColor = false;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.label5.Location = new System.Drawing.Point(215, 82);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(200, 5);
+            this.label5.TabIndex = 15;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.label6.Font = new System.Drawing.Font("Montserrat SemiBold", 10F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(469, 57);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(130, 20);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Banco de Dados";
+            // 
+            // btnDB2
+            // 
+            this.btnDB2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.btnDB2.FlatAppearance.BorderSize = 0;
+            this.btnDB2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDB2.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.btnDB2.ForeColor = System.Drawing.Color.White;
+            this.btnDB2.Location = new System.Drawing.Point(469, 132);
+            this.btnDB2.Name = "btnDB2";
+            this.btnDB2.Size = new System.Drawing.Size(200, 30);
+            this.btnDB2.TabIndex = 16;
+            this.btnDB2.Text = "Gerenciar usuários";
+            this.btnDB2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDB2.UseVisualStyleBackColor = false;
+            // 
+            // btnDB3
+            // 
+            this.btnDB3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.btnDB3.FlatAppearance.BorderSize = 0;
+            this.btnDB3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDB3.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.btnDB3.ForeColor = System.Drawing.Color.White;
+            this.btnDB3.Location = new System.Drawing.Point(469, 172);
+            this.btnDB3.Name = "btnDB3";
+            this.btnDB3.Size = new System.Drawing.Size(200, 30);
+            this.btnDB3.TabIndex = 16;
+            this.btnDB3.Text = "Gerenciar empresas";
+            this.btnDB3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDB3.UseVisualStyleBackColor = false;
+            // 
+            // btnDB4
+            // 
+            this.btnDB4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.btnDB4.FlatAppearance.BorderSize = 0;
+            this.btnDB4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDB4.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.btnDB4.ForeColor = System.Drawing.Color.White;
+            this.btnDB4.Location = new System.Drawing.Point(469, 212);
+            this.btnDB4.Name = "btnDB4";
+            this.btnDB4.Size = new System.Drawing.Size(200, 30);
+            this.btnDB4.TabIndex = 16;
+            this.btnDB4.Text = "Gerenciar serviços";
+            this.btnDB4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDB4.UseVisualStyleBackColor = false;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.label7.Location = new System.Drawing.Point(160, 550);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(840, 50);
+            this.label7.TabIndex = 17;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.label8.Font = new System.Drawing.Font("Montserrat SemiBold", 10F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(215, 57);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(69, 20);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Website";
+            // 
+            // btnWeb1
+            // 
+            this.btnWeb1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.btnWeb1.FlatAppearance.BorderSize = 0;
+            this.btnWeb1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWeb1.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.btnWeb1.ForeColor = System.Drawing.Color.White;
+            this.btnWeb1.Location = new System.Drawing.Point(215, 92);
+            this.btnWeb1.Name = "btnWeb1";
+            this.btnWeb1.Size = new System.Drawing.Size(200, 30);
+            this.btnWeb1.TabIndex = 14;
+            this.btnWeb1.Text = "Trocar banner";
+            this.btnWeb1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnWeb1.UseVisualStyleBackColor = false;
+            // 
+            // btnWeb2
+            // 
+            this.btnWeb2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.btnWeb2.FlatAppearance.BorderSize = 0;
+            this.btnWeb2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWeb2.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.btnWeb2.ForeColor = System.Drawing.Color.White;
+            this.btnWeb2.Location = new System.Drawing.Point(215, 132);
+            this.btnWeb2.Name = "btnWeb2";
+            this.btnWeb2.Size = new System.Drawing.Size(200, 30);
+            this.btnWeb2.TabIndex = 14;
+            this.btnWeb2.Text = "Trocar vídeos destacados";
+            this.btnWeb2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnWeb2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(215, 172);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(200, 30);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Trocar serviços destacados";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.label9.Location = new System.Drawing.Point(469, 82);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(200, 5);
+            this.label9.TabIndex = 15;
+            // 
             // frmPainel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.btnDB4);
+            this.Controls.Add(this.btnDB3);
+            this.Controls.Add(this.btnDB2);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnWeb2);
+            this.Controls.Add(this.btnWeb1);
+            this.Controls.Add(this.btnDB1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.picSair);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.label4);
@@ -259,5 +458,19 @@
         private System.Windows.Forms.PictureBox picSair;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnDB1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnDB2;
+        private System.Windows.Forms.Button btnDB3;
+        private System.Windows.Forms.Button btnDB4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnWeb1;
+        private System.Windows.Forms.Button btnWeb2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label9;
     }
 }
