@@ -37,12 +37,6 @@
             this.lblSairFundo = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.picSair = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picPerfil = new System.Windows.Forms.PictureBox();
-            this.minimize = new System.Windows.Forms.PictureBox();
-            this.close = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnDB1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -64,8 +58,14 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.picSair = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picPerfil = new System.Windows.Forms.PictureBox();
+            this.minimize = new System.Windows.Forms.PictureBox();
+            this.close = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picSair)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimize)).BeginInit();
@@ -75,7 +75,7 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.lblTitulo.Font = new System.Drawing.Font("Poppins", 13F);
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.lblTitulo.Location = new System.Drawing.Point(7, 9);
@@ -158,77 +158,6 @@
             this.label4.Size = new System.Drawing.Size(40, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "FAQ";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(52, 508);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
-            // 
-            // picSair
-            // 
-            this.picSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.picSair.Image = ((System.Drawing.Image)(resources.GetObject("picSair.Image")));
-            this.picSair.Location = new System.Drawing.Point(108, 669);
-            this.picSair.Name = "picSair";
-            this.picSair.Size = new System.Drawing.Size(16, 16);
-            this.picSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picSair.TabIndex = 12;
-            this.picSair.TabStop = false;
-            this.picSair.Click += new System.EventHandler(this.picSair_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.pictureBox1.Image = global::sys_bdourados.Properties.Resources.logopng;
-            this.pictureBox1.Location = new System.Drawing.Point(60, 545);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
-            // picPerfil
-            // 
-            this.picPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.picPerfil.Image = global::sys_bdourados.Properties.Resources.avatar;
-            this.picPerfil.Location = new System.Drawing.Point(60, 80);
-            this.picPerfil.Name = "picPerfil";
-            this.picPerfil.Size = new System.Drawing.Size(80, 80);
-            this.picPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picPerfil.TabIndex = 12;
-            this.picPerfil.TabStop = false;
-            // 
-            // minimize
-            // 
-            this.minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.minimize.Image = global::sys_bdourados.Properties.Resources.minimizar;
-            this.minimize.Location = new System.Drawing.Point(1120, 0);
-            this.minimize.Name = "minimize";
-            this.minimize.Size = new System.Drawing.Size(40, 40);
-            this.minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.minimize.TabIndex = 9;
-            this.minimize.TabStop = false;
-            this.minimize.Click += new System.EventHandler(this.minimize_Click);
-            // 
-            // close
-            // 
-            this.close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.close.Image = global::sys_bdourados.Properties.Resources.fechar;
-            this.close.Location = new System.Drawing.Point(1160, 0);
-            this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(40, 40);
-            this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.close.TabIndex = 10;
-            this.close.TabStop = false;
-            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // label2
             // 
@@ -496,11 +425,82 @@
             this.label12.TabIndex = 19;
             this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
+            // picSair
+            // 
+            this.picSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.picSair.Image = ((System.Drawing.Image)(resources.GetObject("picSair.Image")));
+            this.picSair.Location = new System.Drawing.Point(108, 669);
+            this.picSair.Name = "picSair";
+            this.picSair.Size = new System.Drawing.Size(16, 16);
+            this.picSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSair.TabIndex = 12;
+            this.picSair.TabStop = false;
+            this.picSair.Click += new System.EventHandler(this.picSair_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(52, 508);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 12;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.pictureBox1.Image = global::sys_bdourados.Properties.Resources.logopng;
+            this.pictureBox1.Location = new System.Drawing.Point(60, 545);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // picPerfil
+            // 
+            this.picPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.picPerfil.Image = global::sys_bdourados.Properties.Resources.avatar;
+            this.picPerfil.Location = new System.Drawing.Point(60, 80);
+            this.picPerfil.Name = "picPerfil";
+            this.picPerfil.Size = new System.Drawing.Size(80, 80);
+            this.picPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPerfil.TabIndex = 12;
+            this.picPerfil.TabStop = false;
+            // 
+            // minimize
+            // 
+            this.minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.minimize.Image = global::sys_bdourados.Properties.Resources.minimizar;
+            this.minimize.Location = new System.Drawing.Point(1120, 0);
+            this.minimize.Name = "minimize";
+            this.minimize.Size = new System.Drawing.Size(40, 40);
+            this.minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.minimize.TabIndex = 9;
+            this.minimize.TabStop = false;
+            this.minimize.Click += new System.EventHandler(this.minimize_Click);
+            // 
+            // close
+            // 
+            this.close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.close.Image = global::sys_bdourados.Properties.Resources.fechar;
+            this.close.Location = new System.Drawing.Point(1160, 0);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(40, 40);
+            this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.close.TabIndex = 10;
+            this.close.TabStop = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
             // frmPainel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(1200, 700);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
@@ -542,8 +542,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DouradosSys | Painel";
             this.Load += new System.EventHandler(this.frmPainel_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSair)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimize)).EndInit();

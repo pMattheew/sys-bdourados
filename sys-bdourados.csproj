@@ -61,6 +61,12 @@
     <Compile Include="02-Painel.Designer.cs">
       <DependentUpon>02-Painel.cs</DependentUpon>
     </Compile>
+    <Compile Include="03-Empresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03-Empresa.Designer.cs">
+      <DependentUpon>03-Empresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="variaveis.cs" />
@@ -69,6 +75,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="02-Painel.resx">
       <DependentUpon>02-Painel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03-Empresa.resx">
+      <DependentUpon>03-Empresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
