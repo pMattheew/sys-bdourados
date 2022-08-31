@@ -97,19 +97,18 @@
     <None Include="img\avatar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="img\close.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="img\favicon.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="img\voltar.png" />
+    <None Include="img\minimizar.png" />
+    <None Include="img\fechar.png" />
     <None Include="img\logoutR.png" />
     <None Include="img\teste2faq.png" />
     <None Include="img\testeFaq.png" />
     <None Include="img\logout.png" />
     <None Include="img\faq.png" />
-    <None Include="img\minimize.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

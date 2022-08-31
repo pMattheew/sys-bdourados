@@ -47,9 +47,9 @@
             // lblFundo
             // 
             this.lblFundo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.lblFundo.Location = new System.Drawing.Point(-4, 30);
+            this.lblFundo.Location = new System.Drawing.Point(0, 40);
             this.lblFundo.Name = "lblFundo";
-            this.lblFundo.Size = new System.Drawing.Size(468, 570);
+            this.lblFundo.Size = new System.Drawing.Size(460, 560);
             this.lblFundo.TabIndex = 0;
             // 
             // lblInput
@@ -58,7 +58,7 @@
             this.lblInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.lblInput.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.lblInput.Location = new System.Drawing.Point(77, 250);
+            this.lblInput.Location = new System.Drawing.Point(82, 290);
             this.lblInput.Name = "lblInput";
             this.lblInput.Size = new System.Drawing.Size(58, 22);
             this.lblInput.TabIndex = 1;
@@ -69,7 +69,7 @@
             this.input.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.input.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.input.Font = new System.Drawing.Font("Montserrat", 12F);
-            this.input.Location = new System.Drawing.Point(103, 287);
+            this.input.Location = new System.Drawing.Point(105, 330);
             this.input.Name = "input";
             this.input.Size = new System.Drawing.Size(250, 20);
             this.input.TabIndex = 2;
@@ -79,7 +79,7 @@
             // 
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label3.Location = new System.Drawing.Point(78, 272);
+            this.label3.Location = new System.Drawing.Point(80, 315);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(300, 50);
             this.label3.TabIndex = 3;
@@ -91,7 +91,7 @@
             this.btnAvancar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAvancar.Font = new System.Drawing.Font("Montserrat", 16F, System.Drawing.FontStyle.Bold);
             this.btnAvancar.ForeColor = System.Drawing.Color.White;
-            this.btnAvancar.Location = new System.Drawing.Point(98, 404);
+            this.btnAvancar.Location = new System.Drawing.Point(100, 437);
             this.btnAvancar.Name = "btnAvancar";
             this.btnAvancar.Size = new System.Drawing.Size(260, 50);
             this.btnAvancar.TabIndex = 4;
@@ -116,7 +116,7 @@
             this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.lblTitulo.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.lblTitulo.Location = new System.Drawing.Point(5, 5);
+            this.lblTitulo.Location = new System.Drawing.Point(7, 9);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(54, 28);
             this.lblTitulo.TabIndex = 1;
@@ -126,10 +126,10 @@
             // 
             this.minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.minimize.Image = global::sys_bdourados.Properties.Resources.minimize;
-            this.minimize.Location = new System.Drawing.Point(407, 4);
+            this.minimize.Image = global::sys_bdourados.Properties.Resources.minimizar;
+            this.minimize.Location = new System.Drawing.Point(380, 0);
             this.minimize.Name = "minimize";
-            this.minimize.Size = new System.Drawing.Size(22, 22);
+            this.minimize.Size = new System.Drawing.Size(40, 40);
             this.minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.minimize.TabIndex = 5;
             this.minimize.TabStop = false;
@@ -139,10 +139,10 @@
             // 
             this.close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.close.Image = global::sys_bdourados.Properties.Resources.close;
-            this.close.Location = new System.Drawing.Point(433, 4);
+            this.close.Image = global::sys_bdourados.Properties.Resources.fechar;
+            this.close.Location = new System.Drawing.Point(420, 0);
             this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(22, 22);
+            this.close.Size = new System.Drawing.Size(40, 40);
             this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.close.TabIndex = 5;
             this.close.TabStop = false;
@@ -152,7 +152,7 @@
             // 
             this.picAvatar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.picAvatar.Image = global::sys_bdourados.Properties.Resources.avatar;
-            this.picAvatar.Location = new System.Drawing.Point(168, 71);
+            this.picAvatar.Location = new System.Drawing.Point(170, 100);
             this.picAvatar.Name = "picAvatar";
             this.picAvatar.Size = new System.Drawing.Size(120, 120);
             this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
