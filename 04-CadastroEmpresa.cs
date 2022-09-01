@@ -10,28 +10,22 @@ using System.Windows.Forms;
 
 namespace sys_bdourados
 {
-    public partial class frmEmpresa : Form
+    public partial class frmCadEmpresa : Form
     {
-        public frmEmpresa()
+        public frmCadEmpresa()
         {
             InitializeComponent();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            new frmPainel().Show();
+            new frmEmpresa().Show();
             Close();
         }
 
         private void minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void btnCadastrar_Click(object sender, EventArgs e)
-        {
-            new frmCadEmpresa().Show();
-            Hide();
         }
 
         private void close_Click(object sender, EventArgs e)
