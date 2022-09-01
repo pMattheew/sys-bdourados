@@ -39,7 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.fndTel = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblRazao = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -57,10 +57,10 @@
             this.btnTelefone = new System.Windows.Forms.Button();
             this.lblOperadora = new System.Windows.Forms.Label();
             this.cmbOperadora = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.fndObs = new System.Windows.Forms.Label();
             this.inObs = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.lblObs = new System.Windows.Forms.Label();
+            this.mkdCnpjCpf = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.voltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
@@ -183,14 +183,15 @@
             this.label5.Size = new System.Drawing.Size(228, 35);
             this.label5.TabIndex = 21;
             // 
-            // label6
+            // fndTel
             // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label6.Location = new System.Drawing.Point(36, 443);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(228, 35);
-            this.label6.TabIndex = 21;
+            this.fndTel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.fndTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.fndTel.Location = new System.Drawing.Point(36, 443);
+            this.fndTel.Name = "fndTel";
+            this.fndTel.Size = new System.Drawing.Size(228, 35);
+            this.fndTel.TabIndex = 21;
+            this.fndTel.Visible = false;
             // 
             // lblNome
             // 
@@ -239,6 +240,7 @@
             this.lblTelefone.Size = new System.Drawing.Size(76, 21);
             this.lblTelefone.TabIndex = 22;
             this.lblTelefone.Text = "Telefone:";
+            this.lblTelefone.Visible = false;
             // 
             // lblHorario
             // 
@@ -327,6 +329,7 @@
             this.mkdFone.Name = "mkdFone";
             this.mkdFone.Size = new System.Drawing.Size(209, 20);
             this.mkdFone.TabIndex = 24;
+            this.mkdFone.Visible = false;
             // 
             // cmbHorario
             // 
@@ -378,6 +381,7 @@
             this.btnLimpar.Text = "Limpar campos";
             this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnTelefone
             // 
@@ -393,6 +397,7 @@
             this.btnTelefone.Text = "Adicionar telefone";
             this.btnTelefone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTelefone.UseVisualStyleBackColor = false;
+            this.btnTelefone.Click += new System.EventHandler(this.btnTelefone_Click);
             // 
             // lblOperadora
             // 
@@ -405,6 +410,7 @@
             this.lblOperadora.Size = new System.Drawing.Size(92, 21);
             this.lblOperadora.TabIndex = 22;
             this.lblOperadora.Text = "Operadora:";
+            this.lblOperadora.Visible = false;
             // 
             // cmbOperadora
             // 
@@ -425,15 +431,17 @@
             this.cmbOperadora.Name = "cmbOperadora";
             this.cmbOperadora.Size = new System.Drawing.Size(228, 35);
             this.cmbOperadora.TabIndex = 25;
+            this.cmbOperadora.Visible = false;
             // 
-            // label7
+            // fndObs
             // 
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label7.Location = new System.Drawing.Point(36, 523);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(530, 35);
-            this.label7.TabIndex = 21;
+            this.fndObs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.fndObs.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.fndObs.Location = new System.Drawing.Point(36, 523);
+            this.fndObs.Name = "fndObs";
+            this.fndObs.Size = new System.Drawing.Size(530, 35);
+            this.fndObs.TabIndex = 21;
+            this.fndObs.Visible = false;
             // 
             // inObs
             // 
@@ -445,30 +453,32 @@
             this.inObs.Name = "inObs";
             this.inObs.Size = new System.Drawing.Size(508, 20);
             this.inObs.TabIndex = 20;
+            this.inObs.Visible = false;
             // 
-            // label8
+            // lblObs
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.label8.Font = new System.Drawing.Font("Montserrat", 11F);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.label8.Location = new System.Drawing.Point(36, 498);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(173, 21);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "Descrição do telefone:";
+            this.lblObs.AutoSize = true;
+            this.lblObs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.lblObs.Font = new System.Drawing.Font("Montserrat", 11F);
+            this.lblObs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.lblObs.Location = new System.Drawing.Point(36, 498);
+            this.lblObs.Name = "lblObs";
+            this.lblObs.Size = new System.Drawing.Size(173, 21);
+            this.lblObs.TabIndex = 22;
+            this.lblObs.Text = "Descrição do telefone:";
+            this.lblObs.Visible = false;
             // 
-            // maskedTextBox1
+            // mkdCnpjCpf
             // 
-            this.maskedTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskedTextBox1.Font = new System.Drawing.Font("Montserrat", 12F);
-            this.maskedTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.maskedTextBox1.Location = new System.Drawing.Point(46, 370);
-            this.maskedTextBox1.Mask = "00,000,000/0000-00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(209, 20);
-            this.maskedTextBox1.TabIndex = 24;
+            this.mkdCnpjCpf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.mkdCnpjCpf.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mkdCnpjCpf.Font = new System.Drawing.Font("Montserrat", 12F);
+            this.mkdCnpjCpf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.mkdCnpjCpf.Location = new System.Drawing.Point(46, 370);
+            this.mkdCnpjCpf.Mask = "00,000,000/0000-00";
+            this.mkdCnpjCpf.Name = "mkdCnpjCpf";
+            this.mkdCnpjCpf.Size = new System.Drawing.Size(209, 20);
+            this.mkdCnpjCpf.TabIndex = 24;
             // 
             // frmCadEmpresa
             // 
@@ -482,7 +492,7 @@
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.cmbOperadora);
             this.Controls.Add(this.cmbHorario);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.mkdCnpjCpf);
             this.Controls.Add(this.mkdFone);
             this.Controls.Add(this.radCpf);
             this.Controls.Add(this.lblOperadora);
@@ -490,7 +500,7 @@
             this.Controls.Add(this.lblHorario);
             this.Controls.Add(this.lblTelefone);
             this.Controls.Add(this.lblCnpjCpf);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblObs);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblRazao);
             this.Controls.Add(this.lblNome);
@@ -498,8 +508,8 @@
             this.Controls.Add(this.inEmail);
             this.Controls.Add(this.inRazao);
             this.Controls.Add(this.inNome);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.fndTel);
+            this.Controls.Add(this.fndObs);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -535,7 +545,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label fndTel;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblRazao;
         private System.Windows.Forms.Label lblEmail;
@@ -553,9 +563,9 @@
         private System.Windows.Forms.Button btnTelefone;
         private System.Windows.Forms.Label lblOperadora;
         private System.Windows.Forms.ComboBox cmbOperadora;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label fndObs;
         private System.Windows.Forms.TextBox inObs;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Label lblObs;
+        private System.Windows.Forms.MaskedTextBox mkdCnpjCpf;
     }
 }
