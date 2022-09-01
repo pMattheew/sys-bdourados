@@ -39,9 +39,11 @@
             this.minimize = new System.Windows.Forms.PictureBox();
             this.close = new System.Windows.Forms.PictureBox();
             this.picAvatar = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFundo
@@ -159,6 +161,18 @@
             this.picAvatar.TabIndex = 5;
             this.picAvatar.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.pictureBox1.Image = global::sys_bdourados.Properties.Resources.minimizar;
+            this.pictureBox1.Location = new System.Drawing.Point(420, 560);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,6 +181,7 @@
             this.ClientSize = new System.Drawing.Size(460, 600);
             this.Controls.Add(this.minimize);
             this.Controls.Add(this.close);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.picAvatar);
             this.Controls.Add(this.btnAvancar);
             this.Controls.Add(this.input);
@@ -183,6 +198,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,6 +216,7 @@
         private System.Windows.Forms.Label lblAviso;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.PictureBox minimize;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

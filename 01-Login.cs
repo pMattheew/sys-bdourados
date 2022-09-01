@@ -58,5 +58,10 @@ namespace sys_bdourados
             }
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            new frmPainel().Show();
+            Hide();
+        }
     }
 }

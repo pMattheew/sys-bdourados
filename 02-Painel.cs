@@ -84,5 +84,11 @@ namespace sys_bdourados
         {
 
         }
+
+        private void btnDB3_Click(object sender, EventArgs e)
+        {
+            new frmEmpresa().Show();
+            Hide();
+        }
     }
 }

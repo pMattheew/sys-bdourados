@@ -35,12 +35,15 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnWeb2 = new System.Windows.Forms.Button();
-            this.btnWeb1 = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvEmpresa = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblFundoDinamico = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // minimize
@@ -54,6 +57,7 @@
             this.minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.minimize.TabIndex = 12;
             this.minimize.TabStop = false;
+            this.minimize.Click += new System.EventHandler(this.minimize_Click);
             // 
             // close
             // 
@@ -100,7 +104,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(226, 32);
             this.button2.TabIndex = 16;
-            this.button2.Text = "Ver mensagens recebidas";
+            this.button2.Text = "Adicionar telefone";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -115,7 +119,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(226, 32);
             this.button1.TabIndex = 17;
-            this.button1.Text = "Trocar serviços destacados";
+            this.button1.Text = "Excluir empresa";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -130,24 +134,25 @@
             this.btnWeb2.Name = "btnWeb2";
             this.btnWeb2.Size = new System.Drawing.Size(226, 32);
             this.btnWeb2.TabIndex = 18;
-            this.btnWeb2.Text = "Trocar vídeos destacados";
+            this.btnWeb2.Text = "Atualizar dados da empresa";
             this.btnWeb2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnWeb2.UseVisualStyleBackColor = false;
             // 
-            // btnWeb1
+            // btnCadastrar
             // 
-            this.btnWeb1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.btnWeb1.FlatAppearance.BorderSize = 0;
-            this.btnWeb1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWeb1.Font = new System.Drawing.Font("Montserrat", 10F);
-            this.btnWeb1.ForeColor = System.Drawing.Color.White;
-            this.btnWeb1.Location = new System.Drawing.Point(17, 85);
-            this.btnWeb1.Name = "btnWeb1";
-            this.btnWeb1.Size = new System.Drawing.Size(226, 32);
-            this.btnWeb1.TabIndex = 19;
-            this.btnWeb1.Text = "Trocar banner";
-            this.btnWeb1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnWeb1.UseVisualStyleBackColor = false;
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.btnCadastrar.FlatAppearance.BorderSize = 0;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.Location = new System.Drawing.Point(17, 85);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(226, 32);
+            this.btnCadastrar.TabIndex = 19;
+            this.btnCadastrar.Text = "Cadastrar nova empresa";
+            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // label3
             // 
@@ -161,11 +166,34 @@
             // dgvEmpresa
             // 
             this.dgvEmpresa.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.dgvEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmpresa.Location = new System.Drawing.Point(260, 40);
             this.dgvEmpresa.Name = "dgvEmpresa";
             this.dgvEmpresa.Size = new System.Drawing.Size(940, 610);
             this.dgvEmpresa.TabIndex = 20;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.pictureBox1.Image = global::sys_bdourados.Properties.Resources.voltar;
+            this.pictureBox1.Location = new System.Drawing.Point(1080, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // lblFundoDinamico
+            // 
+            this.lblFundoDinamico.AutoSize = true;
+            this.lblFundoDinamico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.lblFundoDinamico.Location = new System.Drawing.Point(14, 667);
+            this.lblFundoDinamico.Name = "lblFundoDinamico";
+            this.lblFundoDinamico.Size = new System.Drawing.Size(0, 13);
+            this.lblFundoDinamico.TabIndex = 21;
             // 
             // frmEmpresa
             // 
@@ -173,12 +201,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(1200, 700);
+            this.Controls.Add(this.lblFundoDinamico);
             this.Controls.Add(this.dgvEmpresa);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnWeb2);
-            this.Controls.Add(this.btnWeb1);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.minimize);
             this.Controls.Add(this.close);
             this.Controls.Add(this.label1);
@@ -190,6 +220,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,8 +235,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnWeb2;
-        private System.Windows.Forms.Button btnWeb1;
+        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvEmpresa;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblFundoDinamico;
     }
 }

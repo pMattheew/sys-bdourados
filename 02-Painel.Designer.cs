@@ -224,6 +224,7 @@
             this.btnDB3.Text = "Gerenciar empresas";
             this.btnDB3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDB3.UseVisualStyleBackColor = false;
+            this.btnDB3.Click += new System.EventHandler(this.btnDB3_Click);
             // 
             // btnDB4
             // 
