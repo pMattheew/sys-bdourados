@@ -477,7 +477,7 @@
             this.btnEnviarPic.Text = "Enviar imagem";
             this.btnEnviarPic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEnviarPic.UseVisualStyleBackColor = false;
-            this.btnEnviarPic.Click += new System.EventHandler(this.btnTelefone_Click);
+            this.btnEnviarPic.Click += new System.EventHandler(this.btnEnviarPic_Click);
             // 
             // lblFeedback
             // 

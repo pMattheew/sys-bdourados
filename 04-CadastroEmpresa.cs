@@ -75,8 +75,12 @@ namespace sys_bdourados
                 inObs.Clear();
             }
         }
+        private void btnEnviarPic_Click(object sender, EventArgs e)
+        {
 
-        private void btnLimpar_Click(object sender, EventArgs e)
+        }
+
+            private void btnLimpar_Click(object sender, EventArgs e)
         {
             inNome.Clear();
             inRazao.Clear();
