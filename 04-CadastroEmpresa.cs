@@ -87,5 +87,99 @@ namespace sys_bdourados
             cmbOperadora.SelectedIndex = -1;
             inObs.Clear();
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            bool VerificarCampos()
+            {
+                bool camposEstaoValidos = false;
+
+                // titulos voltam para as cores normais
+                lblNome.ForeColor = System.Drawing.Color.FromArgb(196,196,196);
+                lblRazao.ForeColor = System.Drawing.Color.FromArgb(196,196,196);
+                lblEmail.ForeColor = System.Drawing.Color.FromArgb(196,196,196);
+                lblCnpjCpf.ForeColor = System.Drawing.Color.FromArgb(196,196,196);
+                lblHorario.ForeColor = System.Drawing.Color.FromArgb(196,196,196);
+                lblTelefone.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+                lblOperadora.ForeColor = System.Drawing.Color.FromArgb(196,196,196);
+
+                picFeedback.Image = sys_bdourados.Properties.Resources.info;
+                lblFeedback.Text = "Cadastrando empresa...";
+
+
+                if (inNome.Text == "")
+                {
+                    picFeedback.Image = sys_bdourados.Properties.Resources.exclamation;
+                    lblFeedback.Text = "Por favor, preencha o nome da empresa.";
+                    inNome.Focus();
+                    lblNome.ForeColor = System.Drawing.Color.Crimson;
+                    return camposEstaoValidos;
+                }
+                else if (inRazao.Text == "")
+                {
+                    picFeedback.Image = sys_bdourados.Properties.Resources.exclamation;
+                    lblFeedback.Text = "Por favor, preencha a razão social da empresa.";
+                    inRazao.Focus();
+                    lblRazao.ForeColor = System.Drawing.Color.Crimson;
+                    return camposEstaoValidos;
+                }
+                else if (inEmail.Text == "")
+                {
+                    picFeedback.Image = sys_bdourados.Properties.Resources.exclamation;
+                    lblFeedback.Text = "Por favor, preencha o email da empresa.";
+                    inEmail.Focus();
+                    lblEmail.ForeColor = System.Drawing.Color.Crimson;
+                    return camposEstaoValidos;
+                }
+                else if (!mkdCnpjCpf.MaskCompleted)
+                {
+                    picFeedback.Image = sys_bdourados.Properties.Resources.exclamation;
+                    lblFeedback.Text = "Por favor, preencha o CNPJ ou CPF da empresa.";
+                    mkdCnpjCpf.Focus();
+                    lblCnpjCpf.ForeColor = System.Drawing.Color.Crimson;
+                    return camposEstaoValidos;
+                }
+                else if (cmbHorario.SelectedIndex == -1)
+                {
+                    picFeedback.Image = sys_bdourados.Properties.Resources.exclamation;
+                    lblFeedback.Text = "Por favor, preencha o horário de atendimento da empresa.";
+                    cmbHorario.Focus();
+                    lblHorario.ForeColor = System.Drawing.Color.Crimson;
+                    return camposEstaoValidos;
+                }
+                else if (isShowingFone) // somente se cadastrar telefone for true
+                {
+                    if (!mkdFone.MaskCompleted)
+                    {
+                        picFeedback.Image = sys_bdourados.Properties.Resources.exclamation;
+                        lblFeedback.Text = "Por favor, preencha o telefone da empresa.";
+                        mkdFone.Focus();
+                        lblTelefone.ForeColor = System.Drawing.Color.Crimson;
+                        return camposEstaoValidos;
+                    }
+                    else if (cmbOperadora.SelectedIndex == -1)
+                    {
+                        picFeedback.Image = sys_bdourados.Properties.Resources.exclamation;
+                        lblFeedback.Text = "Por favor, preencha a operadora do número da empresa.";
+                        cmbOperadora.Focus();
+                        lblOperadora.ForeColor = System.Drawing.Color.Crimson;
+                        return camposEstaoValidos;
+                    }
+                    else
+                    {
+                        camposEstaoValidos = true;
+                        return camposEstaoValidos;
+                    }
+                }
+                else
+                {
+                    camposEstaoValidos = true;
+                    return camposEstaoValidos;
+                }
+
+            }
+
+            VerificarCampos();
+        }
     }
 }

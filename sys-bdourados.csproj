@@ -119,6 +119,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="img\exclamation.png" />
+    <None Include="img\info.png" />
+    <None Include="img\error.png" />
+    <None Include="img\check.png" />
     <None Include="img\voltar.png" />
     <None Include="img\minimizar.png" />
     <None Include="img\fechar.png" />

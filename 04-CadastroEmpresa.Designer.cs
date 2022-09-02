@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.voltar = new System.Windows.Forms.PictureBox();
-            this.minimize = new System.Windows.Forms.PictureBox();
-            this.close = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.fundo = new System.Windows.Forms.Label();
@@ -62,54 +59,21 @@
             this.lblObs = new System.Windows.Forms.Label();
             this.mkdCnpjCpf = new System.Windows.Forms.MaskedTextBox();
             this.lblBanner = new System.Windows.Forms.Label();
-            this.picBanner = new System.Windows.Forms.PictureBox();
-            this.picLogo = new System.Windows.Forms.PictureBox();
             this.btnEnviarPic = new System.Windows.Forms.Button();
+            this.lblFeedback = new System.Windows.Forms.Label();
+            this.picFeedback = new System.Windows.Forms.PictureBox();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.picBanner = new System.Windows.Forms.PictureBox();
+            this.voltar = new System.Windows.Forms.PictureBox();
+            this.minimize = new System.Windows.Forms.PictureBox();
+            this.close = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picFeedback)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.voltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // voltar
-            // 
-            this.voltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.voltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.voltar.Image = global::sys_bdourados.Properties.Resources.voltar;
-            this.voltar.Location = new System.Drawing.Point(1080, 0);
-            this.voltar.Name = "voltar";
-            this.voltar.Size = new System.Drawing.Size(40, 40);
-            this.voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.voltar.TabIndex = 16;
-            this.voltar.TabStop = false;
-            this.voltar.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // minimize
-            // 
-            this.minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.minimize.Image = global::sys_bdourados.Properties.Resources.minimizar;
-            this.minimize.Location = new System.Drawing.Point(1120, 0);
-            this.minimize.Name = "minimize";
-            this.minimize.Size = new System.Drawing.Size(40, 40);
-            this.minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.minimize.TabIndex = 17;
-            this.minimize.TabStop = false;
-            this.minimize.Click += new System.EventHandler(this.minimize_Click);
-            // 
-            // close
-            // 
-            this.close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.close.Image = global::sys_bdourados.Properties.Resources.fechar;
-            this.close.Location = new System.Drawing.Point(1160, 0);
-            this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(40, 40);
-            this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.close.TabIndex = 18;
-            this.close.TabStop = false;
-            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // label1
             // 
@@ -372,6 +336,7 @@
             this.btnCadastrar.Text = "Cadastrar empresa";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnLimpar
             // 
@@ -498,26 +463,6 @@
             this.lblBanner.TabIndex = 22;
             this.lblBanner.Text = "Banner da empresa:";
             // 
-            // picBanner
-            // 
-            this.picBanner.BackColor = System.Drawing.Color.Black;
-            this.picBanner.Location = new System.Drawing.Point(637, 98);
-            this.picBanner.Name = "picBanner";
-            this.picBanner.Size = new System.Drawing.Size(528, 262);
-            this.picBanner.TabIndex = 27;
-            this.picBanner.TabStop = false;
-            // 
-            // picLogo
-            // 
-            this.picLogo.BackColor = System.Drawing.Color.Black;
-            this.picLogo.Image = global::sys_bdourados.Properties.Resources.logopng;
-            this.picLogo.Location = new System.Drawing.Point(823, 141);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(156, 175);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 28;
-            this.picLogo.TabStop = false;
-            // 
             // btnEnviarPic
             // 
             this.btnEnviarPic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
@@ -534,6 +479,88 @@
             this.btnEnviarPic.UseVisualStyleBackColor = false;
             this.btnEnviarPic.Click += new System.EventHandler(this.btnTelefone_Click);
             // 
+            // lblFeedback
+            // 
+            this.lblFeedback.AutoSize = true;
+            this.lblFeedback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.lblFeedback.Font = new System.Drawing.Font("Montserrat", 11F);
+            this.lblFeedback.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.lblFeedback.Location = new System.Drawing.Point(53, 664);
+            this.lblFeedback.Name = "lblFeedback";
+            this.lblFeedback.Size = new System.Drawing.Size(473, 21);
+            this.lblFeedback.TabIndex = 22;
+            this.lblFeedback.Text = "Para alterar ao próximo campo, pressione TAB em seu teclado.";
+            // 
+            // picFeedback
+            // 
+            this.picFeedback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.picFeedback.Image = global::sys_bdourados.Properties.Resources.info;
+            this.picFeedback.Location = new System.Drawing.Point(30, 665);
+            this.picFeedback.Name = "picFeedback";
+            this.picFeedback.Size = new System.Drawing.Size(20, 20);
+            this.picFeedback.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picFeedback.TabIndex = 29;
+            this.picFeedback.TabStop = false;
+            // 
+            // picLogo
+            // 
+            this.picLogo.BackColor = System.Drawing.Color.Black;
+            this.picLogo.Image = global::sys_bdourados.Properties.Resources.logopng;
+            this.picLogo.Location = new System.Drawing.Point(823, 141);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(156, 175);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 28;
+            this.picLogo.TabStop = false;
+            // 
+            // picBanner
+            // 
+            this.picBanner.BackColor = System.Drawing.Color.Black;
+            this.picBanner.Location = new System.Drawing.Point(637, 98);
+            this.picBanner.Name = "picBanner";
+            this.picBanner.Size = new System.Drawing.Size(528, 262);
+            this.picBanner.TabIndex = 27;
+            this.picBanner.TabStop = false;
+            // 
+            // voltar
+            // 
+            this.voltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.voltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.voltar.Image = global::sys_bdourados.Properties.Resources.voltar;
+            this.voltar.Location = new System.Drawing.Point(1080, 0);
+            this.voltar.Name = "voltar";
+            this.voltar.Size = new System.Drawing.Size(40, 40);
+            this.voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.voltar.TabIndex = 16;
+            this.voltar.TabStop = false;
+            this.voltar.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // minimize
+            // 
+            this.minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.minimize.Image = global::sys_bdourados.Properties.Resources.minimizar;
+            this.minimize.Location = new System.Drawing.Point(1120, 0);
+            this.minimize.Name = "minimize";
+            this.minimize.Size = new System.Drawing.Size(40, 40);
+            this.minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.minimize.TabIndex = 17;
+            this.minimize.TabStop = false;
+            this.minimize.Click += new System.EventHandler(this.minimize_Click);
+            // 
+            // close
+            // 
+            this.close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.close.Image = global::sys_bdourados.Properties.Resources.fechar;
+            this.close.Location = new System.Drawing.Point(1160, 0);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(40, 40);
+            this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.close.TabIndex = 18;
+            this.close.TabStop = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
             // frmCadEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -541,6 +568,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1200, 700);
+            this.Controls.Add(this.picFeedback);
             this.Controls.Add(this.picLogo);
             this.Controls.Add(this.picBanner);
             this.Controls.Add(this.btnEnviarPic);
@@ -561,6 +589,7 @@
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblRazao);
             this.Controls.Add(this.lblBanner);
+            this.Controls.Add(this.lblFeedback);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.inObs);
             this.Controls.Add(this.inEmail);
@@ -582,11 +611,12 @@
             this.Name = "frmCadEmpresa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DouradosSys | Empresa";
+            ((System.ComponentModel.ISupportInitialize)(this.picFeedback)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBanner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.voltar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBanner)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -631,5 +661,7 @@
         private System.Windows.Forms.PictureBox picBanner;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Button btnEnviarPic;
+        private System.Windows.Forms.PictureBox picFeedback;
+        private System.Windows.Forms.Label lblFeedback;
     }
 }
