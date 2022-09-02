@@ -90,6 +90,18 @@ namespace sys_bdourados
             mkdFone.Clear();
             cmbOperadora.SelectedIndex = -1;
             inObs.Clear();
+
+            lblNome.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+            lblRazao.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+            lblEmail.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+            lblCnpjCpf.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+            lblHorario.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+            lblTelefone.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+            lblOperadora.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+
+
+            picFeedback.Image = sys_bdourados.Properties.Resources.info;
+            lblFeedback.Text = "Para alterar ao próximo campo, pressione TAB em seu teclado.";
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
