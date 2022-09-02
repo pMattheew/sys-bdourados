@@ -90,5 +90,10 @@ namespace sys_bdourados
             new frmEmpresa().Show();
             Hide();
         }
+
+        private void btnDB4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -240,6 +240,7 @@
             this.btnDB4.Text = "Gerenciar serviços";
             this.btnDB4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDB4.UseVisualStyleBackColor = false;
+            this.btnDB4.Click += new System.EventHandler(this.btnDB4_Click);
             // 
             // label7
             // 

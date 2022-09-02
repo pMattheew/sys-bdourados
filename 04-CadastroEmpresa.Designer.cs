@@ -487,9 +487,9 @@
             this.lblFeedback.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.lblFeedback.Location = new System.Drawing.Point(53, 664);
             this.lblFeedback.Name = "lblFeedback";
-            this.lblFeedback.Size = new System.Drawing.Size(473, 21);
+            this.lblFeedback.Size = new System.Drawing.Size(484, 21);
             this.lblFeedback.TabIndex = 22;
-            this.lblFeedback.Text = "Para alterar ao próximo campo, pressione TAB em seu teclado.";
+            this.lblFeedback.Text = "Para alternar ao próximo campo, pressione TAB em seu teclado.";
             // 
             // picFeedback
             // 

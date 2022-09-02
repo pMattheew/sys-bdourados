@@ -42,6 +42,16 @@ namespace sys_bdourados
                 isShowingFone = true;
 
                 btnTelefone.Text = "Remover telefone";
+
+                lblNome.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+                lblRazao.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+                lblEmail.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+                lblCnpjCpf.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+                lblHorario.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+                lblTelefone.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+                lblOperadora.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+
+                picFeedback.Image = sys_bdourados.Properties.Resources.info;
                 lblFeedback.Text = "Se desejar adicionar mais telefones à mesma empresa, é possível através do painel Gerenciar empresas.";
 
                 lblTelefone.Visible = isShowingFone;
@@ -60,6 +70,17 @@ namespace sys_bdourados
                 isShowingFone = false;
 
                 btnTelefone.Text = "Adicionar telefone";
+
+                lblNome.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+                lblRazao.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+                lblEmail.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+                lblCnpjCpf.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+                lblHorario.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+                lblTelefone.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+                lblOperadora.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
+
+                picFeedback.Image = sys_bdourados.Properties.Resources.info;
+                lblFeedback.Text = "Para alternar ao próximo campo, pressione TAB em seu teclado.";
 
                 lblTelefone.Visible = isShowingFone;
                 fndTel.Visible = isShowingFone;
@@ -102,7 +123,7 @@ namespace sys_bdourados
 
 
             picFeedback.Image = sys_bdourados.Properties.Resources.info;
-            lblFeedback.Text = "Para alterar ao próximo campo, pressione TAB em seu teclado.";
+            lblFeedback.Text = "Para alternar ao próximo campo, pressione TAB em seu teclado.";
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
