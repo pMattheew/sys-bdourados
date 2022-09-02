@@ -61,9 +61,15 @@
             this.inObs = new System.Windows.Forms.TextBox();
             this.lblObs = new System.Windows.Forms.Label();
             this.mkdCnpjCpf = new System.Windows.Forms.MaskedTextBox();
+            this.lblBanner = new System.Windows.Forms.Label();
+            this.picBanner = new System.Windows.Forms.PictureBox();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.btnEnviarPic = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.voltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // voltar
@@ -145,7 +151,7 @@
             this.inNome.Location = new System.Drawing.Point(47, 101);
             this.inNome.Name = "inNome";
             this.inNome.Size = new System.Drawing.Size(508, 20);
-            this.inNome.TabIndex = 20;
+            this.inNome.TabIndex = 0;
             // 
             // label3
             // 
@@ -263,7 +269,7 @@
             this.inRazao.Location = new System.Drawing.Point(47, 180);
             this.inRazao.Name = "inRazao";
             this.inRazao.Size = new System.Drawing.Size(508, 20);
-            this.inRazao.TabIndex = 20;
+            this.inRazao.TabIndex = 1;
             // 
             // inEmail
             // 
@@ -274,7 +280,7 @@
             this.inEmail.Location = new System.Drawing.Point(47, 260);
             this.inEmail.Name = "inEmail";
             this.inEmail.Size = new System.Drawing.Size(508, 20);
-            this.inEmail.TabIndex = 20;
+            this.inEmail.TabIndex = 2;
             // 
             // radCnpj
             // 
@@ -285,7 +291,7 @@
             this.radCnpj.Location = new System.Drawing.Point(40, 335);
             this.radCnpj.Name = "radCnpj";
             this.radCnpj.Size = new System.Drawing.Size(69, 25);
-            this.radCnpj.TabIndex = 23;
+            this.radCnpj.TabIndex = 3;
             this.radCnpj.TabStop = true;
             this.radCnpj.Text = "CNPJ";
             this.radCnpj.UseVisualStyleBackColor = false;
@@ -301,7 +307,7 @@
             this.radCpf.Location = new System.Drawing.Point(115, 335);
             this.radCpf.Name = "radCpf";
             this.radCpf.Size = new System.Drawing.Size(59, 25);
-            this.radCpf.TabIndex = 23;
+            this.radCpf.TabIndex = 4;
             this.radCpf.TabStop = true;
             this.radCpf.Text = "CPF";
             this.radCpf.UseVisualStyleBackColor = false;
@@ -328,7 +334,7 @@
             this.mkdFone.Mask = "(00)00000-0000";
             this.mkdFone.Name = "mkdFone";
             this.mkdFone.Size = new System.Drawing.Size(209, 20);
-            this.mkdFone.TabIndex = 24;
+            this.mkdFone.TabIndex = 8;
             this.mkdFone.Visible = false;
             // 
             // cmbHorario
@@ -350,7 +356,7 @@
             this.cmbHorario.Location = new System.Drawing.Point(337, 364);
             this.cmbHorario.Name = "cmbHorario";
             this.cmbHorario.Size = new System.Drawing.Size(228, 35);
-            this.cmbHorario.TabIndex = 25;
+            this.cmbHorario.TabIndex = 6;
             // 
             // btnCadastrar
             // 
@@ -362,7 +368,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(30, 614);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(240, 35);
-            this.btnCadastrar.TabIndex = 26;
+            this.btnCadastrar.TabIndex = 11;
             this.btnCadastrar.Text = "Cadastrar empresa";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrar.UseVisualStyleBackColor = false;
@@ -377,7 +383,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(330, 614);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(240, 35);
-            this.btnLimpar.TabIndex = 26;
+            this.btnLimpar.TabIndex = 12;
             this.btnLimpar.Text = "Limpar campos";
             this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLimpar.UseVisualStyleBackColor = false;
@@ -393,7 +399,7 @@
             this.btnTelefone.Location = new System.Drawing.Point(630, 614);
             this.btnTelefone.Name = "btnTelefone";
             this.btnTelefone.Size = new System.Drawing.Size(240, 35);
-            this.btnTelefone.TabIndex = 26;
+            this.btnTelefone.TabIndex = 13;
             this.btnTelefone.Text = "Adicionar telefone";
             this.btnTelefone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTelefone.UseVisualStyleBackColor = false;
@@ -430,7 +436,7 @@
             this.cmbOperadora.Location = new System.Drawing.Point(338, 443);
             this.cmbOperadora.Name = "cmbOperadora";
             this.cmbOperadora.Size = new System.Drawing.Size(228, 35);
-            this.cmbOperadora.TabIndex = 25;
+            this.cmbOperadora.TabIndex = 9;
             this.cmbOperadora.Visible = false;
             // 
             // fndObs
@@ -440,7 +446,7 @@
             this.fndObs.Location = new System.Drawing.Point(36, 523);
             this.fndObs.Name = "fndObs";
             this.fndObs.Size = new System.Drawing.Size(530, 35);
-            this.fndObs.TabIndex = 21;
+            this.fndObs.TabIndex = 9;
             this.fndObs.Visible = false;
             // 
             // inObs
@@ -452,7 +458,7 @@
             this.inObs.Location = new System.Drawing.Point(47, 531);
             this.inObs.Name = "inObs";
             this.inObs.Size = new System.Drawing.Size(508, 20);
-            this.inObs.TabIndex = 20;
+            this.inObs.TabIndex = 10;
             this.inObs.Visible = false;
             // 
             // lblObs
@@ -478,7 +484,55 @@
             this.mkdCnpjCpf.Mask = "00,000,000/0000-00";
             this.mkdCnpjCpf.Name = "mkdCnpjCpf";
             this.mkdCnpjCpf.Size = new System.Drawing.Size(209, 20);
-            this.mkdCnpjCpf.TabIndex = 24;
+            this.mkdCnpjCpf.TabIndex = 5;
+            // 
+            // lblBanner
+            // 
+            this.lblBanner.AutoSize = true;
+            this.lblBanner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.lblBanner.Font = new System.Drawing.Font("Montserrat", 11F);
+            this.lblBanner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.lblBanner.Location = new System.Drawing.Point(636, 69);
+            this.lblBanner.Name = "lblBanner";
+            this.lblBanner.Size = new System.Drawing.Size(161, 21);
+            this.lblBanner.TabIndex = 22;
+            this.lblBanner.Text = "Banner da empresa:";
+            // 
+            // picBanner
+            // 
+            this.picBanner.BackColor = System.Drawing.Color.Black;
+            this.picBanner.Location = new System.Drawing.Point(637, 98);
+            this.picBanner.Name = "picBanner";
+            this.picBanner.Size = new System.Drawing.Size(528, 262);
+            this.picBanner.TabIndex = 27;
+            this.picBanner.TabStop = false;
+            // 
+            // picLogo
+            // 
+            this.picLogo.BackColor = System.Drawing.Color.Black;
+            this.picLogo.Image = global::sys_bdourados.Properties.Resources.logopng;
+            this.picLogo.Location = new System.Drawing.Point(823, 141);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(156, 175);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 28;
+            this.picLogo.TabStop = false;
+            // 
+            // btnEnviarPic
+            // 
+            this.btnEnviarPic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btnEnviarPic.FlatAppearance.BorderSize = 0;
+            this.btnEnviarPic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviarPic.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.btnEnviarPic.ForeColor = System.Drawing.Color.White;
+            this.btnEnviarPic.Location = new System.Drawing.Point(630, 378);
+            this.btnEnviarPic.Name = "btnEnviarPic";
+            this.btnEnviarPic.Size = new System.Drawing.Size(240, 35);
+            this.btnEnviarPic.TabIndex = 7;
+            this.btnEnviarPic.Text = "Enviar imagem";
+            this.btnEnviarPic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEnviarPic.UseVisualStyleBackColor = false;
+            this.btnEnviarPic.Click += new System.EventHandler(this.btnTelefone_Click);
             // 
             // frmCadEmpresa
             // 
@@ -487,6 +541,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1200, 700);
+            this.Controls.Add(this.picLogo);
+            this.Controls.Add(this.picBanner);
+            this.Controls.Add(this.btnEnviarPic);
             this.Controls.Add(this.btnTelefone);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnCadastrar);
@@ -503,6 +560,7 @@
             this.Controls.Add(this.lblObs);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblRazao);
+            this.Controls.Add(this.lblBanner);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.inObs);
             this.Controls.Add(this.inEmail);
@@ -527,6 +585,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.voltar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBanner)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -567,5 +627,9 @@
         private System.Windows.Forms.TextBox inObs;
         private System.Windows.Forms.Label lblObs;
         private System.Windows.Forms.MaskedTextBox mkdCnpjCpf;
+        private System.Windows.Forms.Label lblBanner;
+        private System.Windows.Forms.PictureBox picBanner;
+        private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.Button btnEnviarPic;
     }
 }
