@@ -42,6 +42,7 @@ namespace sys_bdourados
                 isShowingFone = true;
 
                 btnTelefone.Text = "Remover telefone";
+                lblFeedback.Text = "Se desejar adicionar mais telefones à mesma empresa, é possível através do painel Gerenciar empresas.";
 
                 lblTelefone.Visible = isShowingFone;
                 fndTel.Visible = isShowingFone;
