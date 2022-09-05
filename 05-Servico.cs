@@ -29,5 +29,11 @@ namespace sys_bdourados
         {
             Application.Exit();
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            new frmCadServico().Show();
+            Hide();
+        }
     }
 }

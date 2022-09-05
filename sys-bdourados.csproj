@@ -103,6 +103,9 @@
     <EmbeddedResource Include="05-Servico.resx">
       <DependentUpon>05-Servico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="06-CadastroServico.resx">
+      <DependentUpon>06-CadastroServico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
