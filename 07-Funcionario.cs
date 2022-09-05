@@ -16,5 +16,18 @@ namespace sys_bdourados
         {
             InitializeComponent();
         }
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            new frmPainel().Show();
+            Close();
+        }
+        private void minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        private void close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

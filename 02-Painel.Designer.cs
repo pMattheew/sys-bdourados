@@ -182,6 +182,7 @@
             this.btnDB1.Text = "Gerenciar funcionários";
             this.btnDB1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDB1.UseVisualStyleBackColor = false;
+            this.btnDB1.Click += new System.EventHandler(this.btnDB1_Click);
             // 
             // label6
             // 

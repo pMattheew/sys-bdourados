@@ -96,5 +96,11 @@ namespace sys_bdourados
             new frmServico().Show();
             Hide();
         }
+
+        private void btnDB1_Click(object sender, EventArgs e)
+        {
+            new frmFuncionario().Show();
+            Hide();
+        }
     }
 }

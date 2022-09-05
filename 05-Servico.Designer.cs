@@ -28,74 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.picShift = new System.Windows.Forms.PictureBox();
-            this.picTab2 = new System.Windows.Forms.PictureBox();
-            this.picTab1 = new System.Windows.Forms.PictureBox();
-            this.picFeedback = new System.Windows.Forms.PictureBox();
             this.lblFeedback = new System.Windows.Forms.Label();
             this.dgvEmpresa = new System.Windows.Forms.DataGridView();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.picShift = new System.Windows.Forms.PictureBox();
+            this.picTab2 = new System.Windows.Forms.PictureBox();
+            this.picTab1 = new System.Windows.Forms.PictureBox();
+            this.picFeedback = new System.Windows.Forms.PictureBox();
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.minimize = new System.Windows.Forms.PictureBox();
             this.close = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblTitulo = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picShift)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTab2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTab1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFeedback)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             this.SuspendLayout();
-            // 
-            // picShift
-            // 
-            this.picShift.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.picShift.Image = global::sys_bdourados.Properties.Resources.shift;
-            this.picShift.Location = new System.Drawing.Point(925, 665);
-            this.picShift.Name = "picShift";
-            this.picShift.Size = new System.Drawing.Size(20, 20);
-            this.picShift.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picShift.TabIndex = 47;
-            this.picShift.TabStop = false;
-            // 
-            // picTab2
-            // 
-            this.picTab2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.picTab2.Image = global::sys_bdourados.Properties.Resources.tab;
-            this.picTab2.Location = new System.Drawing.Point(850, 665);
-            this.picTab2.Name = "picTab2";
-            this.picTab2.Size = new System.Drawing.Size(20, 20);
-            this.picTab2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picTab2.TabIndex = 48;
-            this.picTab2.TabStop = false;
-            // 
-            // picTab1
-            // 
-            this.picTab1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.picTab1.Image = global::sys_bdourados.Properties.Resources.tab;
-            this.picTab1.Location = new System.Drawing.Point(412, 665);
-            this.picTab1.Name = "picTab1";
-            this.picTab1.Size = new System.Drawing.Size(20, 20);
-            this.picTab1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picTab1.TabIndex = 49;
-            this.picTab1.TabStop = false;
-            // 
-            // picFeedback
-            // 
-            this.picFeedback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.picFeedback.Image = global::sys_bdourados.Properties.Resources.info;
-            this.picFeedback.Location = new System.Drawing.Point(30, 665);
-            this.picFeedback.Name = "picFeedback";
-            this.picFeedback.Size = new System.Drawing.Size(20, 20);
-            this.picFeedback.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picFeedback.TabIndex = 50;
-            this.picFeedback.TabStop = false;
             // 
             // lblFeedback
             // 
@@ -175,6 +131,72 @@
             this.label3.Size = new System.Drawing.Size(260, 610);
             this.label3.TabIndex = 40;
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.label1.Font = new System.Drawing.Font("Poppins", 13F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.label1.Location = new System.Drawing.Point(0, 650);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1200, 50);
+            this.label1.TabIndex = 35;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.lblTitulo.Font = new System.Drawing.Font("Poppins", 13F);
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.lblTitulo.Location = new System.Drawing.Point(7, 9);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(181, 31);
+            this.lblTitulo.TabIndex = 36;
+            this.lblTitulo.Text = "Gerenciar serviços";
+            // 
+            // picShift
+            // 
+            this.picShift.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.picShift.Image = global::sys_bdourados.Properties.Resources.shift;
+            this.picShift.Location = new System.Drawing.Point(925, 665);
+            this.picShift.Name = "picShift";
+            this.picShift.Size = new System.Drawing.Size(20, 20);
+            this.picShift.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picShift.TabIndex = 47;
+            this.picShift.TabStop = false;
+            // 
+            // picTab2
+            // 
+            this.picTab2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.picTab2.Image = global::sys_bdourados.Properties.Resources.tab;
+            this.picTab2.Location = new System.Drawing.Point(850, 665);
+            this.picTab2.Name = "picTab2";
+            this.picTab2.Size = new System.Drawing.Size(20, 20);
+            this.picTab2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picTab2.TabIndex = 48;
+            this.picTab2.TabStop = false;
+            // 
+            // picTab1
+            // 
+            this.picTab1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.picTab1.Image = global::sys_bdourados.Properties.Resources.tab;
+            this.picTab1.Location = new System.Drawing.Point(412, 665);
+            this.picTab1.Name = "picTab1";
+            this.picTab1.Size = new System.Drawing.Size(20, 20);
+            this.picTab1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picTab1.TabIndex = 49;
+            this.picTab1.TabStop = false;
+            // 
+            // picFeedback
+            // 
+            this.picFeedback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.picFeedback.Image = global::sys_bdourados.Properties.Resources.info;
+            this.picFeedback.Location = new System.Drawing.Point(30, 665);
+            this.picFeedback.Name = "picFeedback";
+            this.picFeedback.Size = new System.Drawing.Size(20, 20);
+            this.picFeedback.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picFeedback.TabIndex = 50;
+            this.picFeedback.TabStop = false;
+            // 
             // btnVoltar
             // 
             this.btnVoltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -214,28 +236,6 @@
             this.close.TabStop = false;
             this.close.Click += new System.EventHandler(this.close_Click);
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.label1.Font = new System.Drawing.Font("Poppins", 13F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.label1.Location = new System.Drawing.Point(0, 650);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1200, 50);
-            this.label1.TabIndex = 35;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
-            this.lblTitulo.Font = new System.Drawing.Font("Poppins", 13F);
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.lblTitulo.Location = new System.Drawing.Point(7, 9);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(181, 31);
-            this.lblTitulo.TabIndex = 36;
-            this.lblTitulo.Text = "Gerenciar serviços";
-            // 
             // frmServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,11 +261,11 @@
             this.Name = "frmServico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DouradosSys | Serviço";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picShift)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTab2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTab1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFeedback)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
