@@ -34,10 +34,10 @@
             this.picFeedback = new System.Windows.Forms.PictureBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.lblRazao = new System.Windows.Forms.Label();
+            this.lblDescricao = new System.Windows.Forms.Label();
             this.lblFeedback = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.inRazao = new System.Windows.Forms.TextBox();
+            this.inDescricao = new System.Windows.Forms.TextBox();
             this.inNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             this.lblValor = new System.Windows.Forms.Label();
             this.inValor = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblEmpresa = new System.Windows.Forms.Label();
             this.cmbTempoExec = new System.Windows.Forms.ComboBox();
             this.lblTempoExec = new System.Windows.Forms.Label();
             this.cmbEmpresa = new System.Windows.Forms.ComboBox();
@@ -121,6 +121,7 @@
             this.btnLimpar.Text = "Limpar campos";
             this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnCadastrar
             // 
@@ -136,18 +137,19 @@
             this.btnCadastrar.Text = "Cadastrar serviço";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // lblRazao
+            // lblDescricao
             // 
-            this.lblRazao.AutoSize = true;
-            this.lblRazao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.lblRazao.Font = new System.Drawing.Font("Montserrat", 11F);
-            this.lblRazao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.lblRazao.Location = new System.Drawing.Point(36, 148);
-            this.lblRazao.Name = "lblRazao";
-            this.lblRazao.Size = new System.Drawing.Size(163, 21);
-            this.lblRazao.TabIndex = 42;
-            this.lblRazao.Text = "Descrição do serviço:";
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.lblDescricao.Font = new System.Drawing.Font("Montserrat", 11F);
+            this.lblDescricao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.lblDescricao.Location = new System.Drawing.Point(36, 148);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Size = new System.Drawing.Size(163, 21);
+            this.lblDescricao.TabIndex = 42;
+            this.lblDescricao.Text = "Descrição do serviço:";
             // 
             // lblFeedback
             // 
@@ -174,17 +176,17 @@
             this.lblNome.TabIndex = 44;
             this.lblNome.Text = "Nome do serviço:";
             // 
-            // inRazao
+            // inDescricao
             // 
-            this.inRazao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.inRazao.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.inRazao.Font = new System.Drawing.Font("Montserrat", 12F);
-            this.inRazao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.inRazao.Location = new System.Drawing.Point(47, 182);
-            this.inRazao.Multiline = true;
-            this.inRazao.Name = "inRazao";
-            this.inRazao.Size = new System.Drawing.Size(508, 207);
-            this.inRazao.TabIndex = 31;
+            this.inDescricao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.inDescricao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.inDescricao.Font = new System.Drawing.Font("Montserrat", 12F);
+            this.inDescricao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.inDescricao.Location = new System.Drawing.Point(47, 182);
+            this.inDescricao.Multiline = true;
+            this.inDescricao.Name = "inDescricao";
+            this.inDescricao.Size = new System.Drawing.Size(508, 207);
+            this.inDescricao.TabIndex = 31;
             // 
             // inNome
             // 
@@ -317,17 +319,17 @@
             this.label5.Size = new System.Drawing.Size(228, 35);
             this.label5.TabIndex = 50;
             // 
-            // label6
+            // lblEmpresa
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.label6.Font = new System.Drawing.Font("Montserrat", 11F);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.label6.Location = new System.Drawing.Point(36, 498);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(164, 21);
-            this.label6.TabIndex = 51;
-            this.label6.Text = "Empresa prestadora:";
+            this.lblEmpresa.AutoSize = true;
+            this.lblEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.lblEmpresa.Font = new System.Drawing.Font("Montserrat", 11F);
+            this.lblEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.lblEmpresa.Location = new System.Drawing.Point(36, 498);
+            this.lblEmpresa.Name = "lblEmpresa";
+            this.lblEmpresa.Size = new System.Drawing.Size(164, 21);
+            this.lblEmpresa.TabIndex = 51;
+            this.lblEmpresa.Text = "Empresa prestadora:";
             // 
             // cmbTempoExec
             // 
@@ -397,7 +399,7 @@
             this.Controls.Add(this.cmbEmpresa);
             this.Controls.Add(this.cmbTempoExec);
             this.Controls.Add(this.lblTempoExec);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblEmpresa);
             this.Controls.Add(this.lblValor);
             this.Controls.Add(this.inValor);
             this.Controls.Add(this.label5);
@@ -407,10 +409,10 @@
             this.Controls.Add(this.picFeedback);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.lblRazao);
+            this.Controls.Add(this.lblDescricao);
             this.Controls.Add(this.lblFeedback);
             this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.inRazao);
+            this.Controls.Add(this.inDescricao);
             this.Controls.Add(this.inNome);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -444,10 +446,10 @@
         private System.Windows.Forms.PictureBox picFeedback;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Label lblRazao;
+        private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.Label lblFeedback;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.TextBox inRazao;
+        private System.Windows.Forms.TextBox inDescricao;
         private System.Windows.Forms.TextBox inNome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -460,7 +462,7 @@
         private System.Windows.Forms.Label lblValor;
         private System.Windows.Forms.TextBox inValor;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblEmpresa;
         private System.Windows.Forms.ComboBox cmbTempoExec;
         private System.Windows.Forms.Label lblTempoExec;
         private System.Windows.Forms.ComboBox cmbEmpresa;
