@@ -61,12 +61,18 @@
             this.lblBanner = new System.Windows.Forms.Label();
             this.btnEnviarPic = new System.Windows.Forms.Button();
             this.lblFeedback = new System.Windows.Forms.Label();
+            this.picShift = new System.Windows.Forms.PictureBox();
+            this.picTab2 = new System.Windows.Forms.PictureBox();
+            this.picTab1 = new System.Windows.Forms.PictureBox();
             this.picFeedback = new System.Windows.Forms.PictureBox();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.picBanner = new System.Windows.Forms.PictureBox();
             this.voltar = new System.Windows.Forms.PictureBox();
             this.minimize = new System.Windows.Forms.PictureBox();
             this.close = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picShift)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTab2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTab1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFeedback)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
@@ -487,9 +493,43 @@
             this.lblFeedback.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.lblFeedback.Location = new System.Drawing.Point(53, 664);
             this.lblFeedback.Name = "lblFeedback";
-            this.lblFeedback.Size = new System.Drawing.Size(484, 21);
+            this.lblFeedback.Size = new System.Drawing.Size(873, 21);
             this.lblFeedback.TabIndex = 22;
-            this.lblFeedback.Text = "Para alternar ao próximo campo, pressione TAB em seu teclado.";
+            this.lblFeedback.Text = "Para alternar ao próximo campo, pressione Tab       em seu teclado; e para o camp" +
+    "o anterior, pressione Tab       + Shift";
+            // 
+            // picShift
+            // 
+            this.picShift.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.picShift.Image = global::sys_bdourados.Properties.Resources.shift;
+            this.picShift.Location = new System.Drawing.Point(925, 665);
+            this.picShift.Name = "picShift";
+            this.picShift.Size = new System.Drawing.Size(20, 20);
+            this.picShift.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picShift.TabIndex = 29;
+            this.picShift.TabStop = false;
+            // 
+            // picTab2
+            // 
+            this.picTab2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.picTab2.Image = global::sys_bdourados.Properties.Resources.tab;
+            this.picTab2.Location = new System.Drawing.Point(850, 665);
+            this.picTab2.Name = "picTab2";
+            this.picTab2.Size = new System.Drawing.Size(20, 20);
+            this.picTab2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picTab2.TabIndex = 29;
+            this.picTab2.TabStop = false;
+            // 
+            // picTab1
+            // 
+            this.picTab1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.picTab1.Image = global::sys_bdourados.Properties.Resources.tab;
+            this.picTab1.Location = new System.Drawing.Point(412, 665);
+            this.picTab1.Name = "picTab1";
+            this.picTab1.Size = new System.Drawing.Size(20, 20);
+            this.picTab1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picTab1.TabIndex = 29;
+            this.picTab1.TabStop = false;
             // 
             // picFeedback
             // 
@@ -568,6 +608,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1200, 700);
+            this.Controls.Add(this.picShift);
+            this.Controls.Add(this.picTab2);
+            this.Controls.Add(this.picTab1);
             this.Controls.Add(this.picFeedback);
             this.Controls.Add(this.picLogo);
             this.Controls.Add(this.picBanner);
@@ -611,6 +654,9 @@
             this.Name = "frmCadEmpresa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DouradosSys | Empresa";
+            ((System.ComponentModel.ISupportInitialize)(this.picShift)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTab2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTab1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFeedback)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).EndInit();
@@ -663,5 +709,8 @@
         private System.Windows.Forms.Button btnEnviarPic;
         private System.Windows.Forms.PictureBox picFeedback;
         private System.Windows.Forms.Label lblFeedback;
+        private System.Windows.Forms.PictureBox picTab1;
+        private System.Windows.Forms.PictureBox picTab2;
+        private System.Windows.Forms.PictureBox picShift;
     }
 }

@@ -53,6 +53,10 @@ namespace sys_bdourados
 
                 picFeedback.Image = sys_bdourados.Properties.Resources.info;
                 lblFeedback.Text = "Se desejar adicionar mais telefones à mesma empresa, é possível através do painel Gerenciar empresas.";
+                picTab1.Visible = false;
+                picTab2.Visible = false;
+                picShift.Visible = false;
+
 
                 lblTelefone.Visible = isShowingFone;
                 fndTel.Visible = isShowingFone;
@@ -80,7 +84,10 @@ namespace sys_bdourados
                 lblOperadora.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
 
                 picFeedback.Image = sys_bdourados.Properties.Resources.info;
-                lblFeedback.Text = "Para alternar ao próximo campo, pressione TAB em seu teclado.";
+                lblFeedback.Text = "Para alternar ao próximo campo, pressione Tab       em seu teclado; e para o campo anterior, pressione Tab       + Shift";
+                picTab1.Visible = true;
+                picTab2.Visible = true;
+                picShift.Visible = true;
 
                 lblTelefone.Visible = isShowingFone;
                 fndTel.Visible = isShowingFone;
@@ -123,7 +130,10 @@ namespace sys_bdourados
 
 
             picFeedback.Image = sys_bdourados.Properties.Resources.info;
-            lblFeedback.Text = "Para alternar ao próximo campo, pressione TAB em seu teclado.";
+            lblFeedback.Text = "Para alternar ao próximo campo, pressione Tab       em seu teclado; e para o campo anterior, pressione Tab       + Shift";
+            picTab1.Visible = true;
+            picTab2.Visible = true;
+            picShift.Visible = true;
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -143,6 +153,9 @@ namespace sys_bdourados
 
                 picFeedback.Image = sys_bdourados.Properties.Resources.info;
                 lblFeedback.Text = "Cadastrando empresa...";
+                picTab1.Visible = false;
+                picTab2.Visible = false;
+                picShift.Visible = false;
 
 
                 if (inNome.Text == "")
