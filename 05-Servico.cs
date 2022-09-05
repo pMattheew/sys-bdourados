@@ -10,11 +10,24 @@ using System.Windows.Forms;
 
 namespace sys_bdourados
 {
-    public partial class _05_Servico : Form
+    public partial class frmServico : Form
     {
-        public _05_Servico()
+        public frmServico()
         {
             InitializeComponent();
+        }
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            new frmPainel().Show();
+            Close();
+        }
+        private void minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        private void close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -93,7 +93,8 @@ namespace sys_bdourados
 
         private void btnDB4_Click(object sender, EventArgs e)
         {
-
+            new frmServico().Show();
+            Hide();
         }
     }
 }

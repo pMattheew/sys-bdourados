@@ -27,6 +27,10 @@ namespace sys_bdourados
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        private void close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
@@ -34,9 +38,5 @@ namespace sys_bdourados
             Hide();
         }
 
-        private void close_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }
