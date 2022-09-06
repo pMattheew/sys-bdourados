@@ -11,7 +11,7 @@ namespace sys_bdourados
 {
     class Banco
     {
-        static MySqlConnection Conexao = new MySqlConnection("SERVER=localhost;USER=root;DATABASE=id19036169_bdouradosdb");
+        public static MySqlConnection Conexao = new MySqlConnection("SERVER=localhost;USER=root;DATABASE=id19036169_bdouradosdb");
 
         // Conexao.Open(); abre o banco de dados
         // Conexao.Close(); fecha o banco de dados
@@ -39,6 +39,42 @@ namespace sys_bdourados
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao fazer consulta: \n\n" + ex);
+            }
+        }
+
+        public static void ExcluirLinha(string tabela, int linha)
+        {
+            try
+            {
+                Conexao.Open();
+
+                // concatena a inicial maiúscula com o resto da string (E + mpresa = dgvEmpresa) #
+                string coluna = char.ToUpper(tabela[0]) + tabela.Substring(1); //#
+
+                //  empresa............idEmpresa........codEmpresa
+                string query = "DELETE FROM " + tabela + " WHERE id" + coluna + "=@" + linha.ToString();
+
+                MySqlCommand cmd = new MySqlCommand(query, Conexao);
+
+                cmd.Parameters.AddWithValue("@" + linha.ToString(), linha); // declara a variável do SQL com o valor armazenado no objeto Variaveis do sistema (codEmpresa).
+
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+
+                DataGridView dataGridView = new DataGridView(); //#
+
+                dataGridView.Name = "dgv" + coluna;
+
+                dataGridView.DataSource = dt;
+                dataGridView.ClearSelection();
+
+                Conexao.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao excluir campo: \n\n" + ex.Message);
             }
         }
     }

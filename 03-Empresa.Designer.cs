@@ -110,6 +110,7 @@
             this.btnExcluir.Text = "Excluir empresa";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAtualizar
             // 
@@ -213,6 +214,7 @@
             this.dgvEmpresa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmpresa.Size = new System.Drawing.Size(940, 610);
             this.dgvEmpresa.TabIndex = 20;
+            this.dgvEmpresa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpresa_CellClick);
             // 
             // lblFundoDinamico
             // 
