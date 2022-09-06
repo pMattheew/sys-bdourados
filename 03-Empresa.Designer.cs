@@ -289,6 +289,7 @@
             this.Name = "frmEmpresa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DouradosSys | Empresa";
+            this.Load += new System.EventHandler(this.frmEmpresa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimize)).EndInit();

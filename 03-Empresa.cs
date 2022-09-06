@@ -38,5 +38,9 @@ namespace sys_bdourados
             Hide();
         }
 
+        private void frmEmpresa_Load(object sender, EventArgs e)
+        {
+            Banco.CarregarDados("empresa", dgvEmpresa);
+        }
     }
 }
