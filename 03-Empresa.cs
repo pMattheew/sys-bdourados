@@ -40,7 +40,8 @@ namespace sys_bdourados
 
         private void frmEmpresa_Load(object sender, EventArgs e)
         {
-            Banco.CarregarDados("empresa", dgvEmpresa);
+            string query = "SELECT nomeEmpresa 'Nome da empresa', razaoSocialEmpresa 'Razão social', cnpjCpfEmpresa 'CNPJ/CPF', emailEmpresa 'Email da empresa', GROUP_CONCAT(numeroFoneEmpresa) 'Número da empresa', horarioAtendEmpresa 'Horário de atendimento' FROM empresa LEFT JOIN foneempresa ON foneempresa.idEmpresa = empresa.idEmpresa GROUP BY empresa.idEmpresa";
+            Banco.CarregarDados(query, dgvEmpresa);
         }
     }
 }

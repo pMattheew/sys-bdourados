@@ -16,13 +16,11 @@ namespace sys_bdourados
         // Conexao.Open(); abre o banco de dados
         // Conexao.Close(); fecha o banco de dados
 
-        public static void CarregarDados(string tabela, DataGridView dgv)
+        public static void CarregarDados(string query, DataGridView dgv)
         {
             try
             {
                 Conexao.Open();
-
-                string query = "SELECT * FROM " + tabela;
 
                 MySqlCommand cmd = new MySqlCommand(query, Conexao);  // gera a query
 
