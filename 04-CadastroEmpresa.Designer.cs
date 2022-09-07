@@ -120,7 +120,7 @@
             this.inNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.inNome.Location = new System.Drawing.Point(47, 101);
             this.inNome.Name = "inNome";
-            this.inNome.Size = new System.Drawing.Size(508, 20);
+            this.inNome.Size = new System.Drawing.Size(508, 23);
             this.inNome.TabIndex = 0;
             // 
             // label3
@@ -238,7 +238,7 @@
             this.inRazao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.inRazao.Location = new System.Drawing.Point(47, 180);
             this.inRazao.Name = "inRazao";
-            this.inRazao.Size = new System.Drawing.Size(508, 20);
+            this.inRazao.Size = new System.Drawing.Size(508, 23);
             this.inRazao.TabIndex = 1;
             // 
             // inEmail
@@ -249,7 +249,7 @@
             this.inEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.inEmail.Location = new System.Drawing.Point(47, 260);
             this.inEmail.Name = "inEmail";
-            this.inEmail.Size = new System.Drawing.Size(508, 20);
+            this.inEmail.Size = new System.Drawing.Size(508, 23);
             this.inEmail.TabIndex = 2;
             // 
             // radCnpj
@@ -303,7 +303,7 @@
             this.mkdFone.Location = new System.Drawing.Point(46, 450);
             this.mkdFone.Mask = "(00)00000-0000";
             this.mkdFone.Name = "mkdFone";
-            this.mkdFone.Size = new System.Drawing.Size(209, 20);
+            this.mkdFone.Size = new System.Drawing.Size(209, 23);
             this.mkdFone.TabIndex = 8;
             this.mkdFone.Visible = false;
             // 
@@ -428,7 +428,7 @@
             this.inObs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.inObs.Location = new System.Drawing.Point(47, 531);
             this.inObs.Name = "inObs";
-            this.inObs.Size = new System.Drawing.Size(508, 20);
+            this.inObs.Size = new System.Drawing.Size(508, 23);
             this.inObs.TabIndex = 10;
             this.inObs.Visible = false;
             // 
@@ -452,9 +452,9 @@
             this.mkdCnpjCpf.Font = new System.Drawing.Font("Montserrat", 12F);
             this.mkdCnpjCpf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.mkdCnpjCpf.Location = new System.Drawing.Point(46, 370);
-            this.mkdCnpjCpf.Mask = "00,000,000/0000-00";
+            this.mkdCnpjCpf.Mask = "000,000,000/000-00";
             this.mkdCnpjCpf.Name = "mkdCnpjCpf";
-            this.mkdCnpjCpf.Size = new System.Drawing.Size(209, 20);
+            this.mkdCnpjCpf.Size = new System.Drawing.Size(209, 23);
             this.mkdCnpjCpf.TabIndex = 5;
             // 
             // lblBanner
