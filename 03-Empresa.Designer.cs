@@ -215,6 +215,7 @@
             this.dgvEmpresa.Size = new System.Drawing.Size(940, 610);
             this.dgvEmpresa.TabIndex = 20;
             this.dgvEmpresa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpresa_CellClick);
+            this.dgvEmpresa.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvEmpresa_DataBindingComplete);
             // 
             // lblFundoDinamico
             // 

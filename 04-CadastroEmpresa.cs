@@ -264,8 +264,6 @@ namespace sys_bdourados
                 picFeedback.Image = sys_bdourados.Properties.Resources.check;
                 lblFeedback.Text = "Empresa cadastrada com sucesso!";
             }
-
-
         }
     }
 }

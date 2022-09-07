@@ -43,7 +43,7 @@ namespace sys_bdourados
             }
         }
 
-        public static void ExcluirLinha(string tabela, int linha)
+        public static void ExcluirLinha(string tabela, int id)
         {
             try
             {
@@ -53,11 +53,11 @@ namespace sys_bdourados
                 string coluna = char.ToUpper(tabela[0]) + tabela.Substring(1); //#
 
                 //  empresa............idEmpresa........codEmpresa
-                string query = "DELETE FROM " + tabela + " WHERE id" + coluna + "=@" + linha.ToString();
+                string query = "DELETE FROM " + tabela + " WHERE id" + coluna + "=@id" + coluna;
 
                 MySqlCommand cmd = new MySqlCommand(query, Conexao);
 
-                cmd.Parameters.AddWithValue("@" + linha.ToString(), linha); // declara a variável do SQL com o valor armazenado no objeto Variaveis do sistema (codEmpresa).
+                cmd.Parameters.AddWithValue("@id" + coluna, id); // declara a variável do SQL com o valor armazenado no objeto Variaveis do sistema (codEmpresa).
 
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
