@@ -14,6 +14,19 @@ namespace sys_bdourados
     {
         bool isShowingFone = false;
 
+        public class Empresa
+        {
+            public string idEmpresa { get; set; }
+            public string nomeEmpresa { get; set; }
+            public string cnpjCpfEmpresa { get; set; }
+            public string razaoSocialEmpresa { get; set; }
+            public string emailEmpresa { get; set; }
+            public string bannerEmpresa { get; set; }
+            public string statusEmpresa { get; set; }
+            public string dataCadEmpresa { get; set; }
+            public string horarioAtendEmpresa { get; set; }
+        }
+
         public frmCadEmpresa()
         {
             InitializeComponent();
@@ -35,6 +48,7 @@ namespace sys_bdourados
             Application.Exit();
         }
 
+        // botão Adicionar telefone
         private void btnTelefone_Click(object sender, EventArgs e)
         {
             if (!isShowingFone)
@@ -109,7 +123,7 @@ namespace sys_bdourados
 
         }
 
-            private void btnLimpar_Click(object sender, EventArgs e)
+        private void btnLimpar_Click(object sender, EventArgs e)
         {
             inNome.Clear();
             inRazao.Clear();
@@ -150,12 +164,6 @@ namespace sys_bdourados
                 lblHorario.ForeColor = System.Drawing.Color.FromArgb(196,196,196);
                 lblTelefone.ForeColor = System.Drawing.Color.FromArgb(196, 196, 196);
                 lblOperadora.ForeColor = System.Drawing.Color.FromArgb(196,196,196);
-
-                picFeedback.Image = sys_bdourados.Properties.Resources.info;
-                lblFeedback.Text = "Cadastrando empresa...";
-                picTab1.Visible = false;
-                picTab2.Visible = false;
-                picShift.Visible = false;
 
 
                 if (inNome.Text == "")
@@ -229,8 +237,35 @@ namespace sys_bdourados
                 }
 
             }
+            
+            picFeedback.Image = sys_bdourados.Properties.Resources.info;
+            lblFeedback.Text = "Cadastrando empresa...";
+            picTab1.Visible = false;
+            picTab2.Visible = false;
+            picShift.Visible = false;
 
-            VerificarCampos();
+            if (VerificarCampos())
+            {
+                Empresa NovaEmpresa = new Empresa()
+            {
+                idEmpresa = "DEFAULT",
+                nomeEmpresa = inNome.Text,
+                cnpjCpfEmpresa = mkdCnpjCpf.Text,
+                razaoSocialEmpresa = inRazao.Text,
+                emailEmpresa = inEmail.Text,
+                bannerEmpresa = "DEFAULT",
+                statusEmpresa = "ATIVO",
+                dataCadEmpresa = DateTime.Now.ToString("yyyy-MM-dd"),
+                horarioAtendEmpresa = cmbHorario.Text
+            };
+
+                Banco.InserirLinha("empresa", NovaEmpresa);
+
+                picFeedback.Image = sys_bdourados.Properties.Resources.check;
+                lblFeedback.Text = "Empresa cadastrada com sucesso!";
+            }
+
+
         }
     }
 }

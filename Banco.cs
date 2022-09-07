@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -75,6 +76,52 @@ namespace sys_bdourados
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao excluir campo: \n\n" + ex.Message);
+            }
+        }
+
+        public static void InserirLinha(string tabela, object objeto)
+        {
+            try
+            {
+
+                Conexao.Open();
+
+                string nome = char.ToUpper(tabela[0]) + tabela.Substring(1);
+
+                // método que concatena as chaves e valores do insert
+                string Concatenar(bool valor)
+                {
+                    string resultado = "";
+                    string concatenarArroba = valor ? ",@" : ",";
+                    int caracterFinal = valor ? 2 : 1;
+
+                    foreach (var prop in objeto.GetType().GetProperties())
+                    {
+                        resultado += (prop.Name + concatenarArroba);
+                    }
+
+                    resultado = resultado.Remove(resultado.Length - caracterFinal);
+
+                    return resultado;
+                }
+
+                string insert = "INSERT INTO " + tabela + "(" + Concatenar(false) + ")VALUES(" + Concatenar(true) + ")";
+
+                MySqlCommand cmd = new MySqlCommand(insert, Conexao);
+
+                // repetição para dar valor aos parâmetros do insert
+                foreach (var prop in objeto.GetType().GetProperties())
+                {
+                    cmd.Parameters.AddWithValue("@" + prop.Name, prop.GetValue(objeto));
+                }
+
+                cmd.ExecuteNonQuery();
+
+                Conexao.Close();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erro ao cadastrar: \n\n" + ex);
             }
         }
     }
