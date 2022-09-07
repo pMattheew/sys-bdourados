@@ -46,6 +46,7 @@ namespace sys_bdourados
         private void frmEmpresa_Load(object sender, EventArgs e)
         {
             Banco.CarregarDados(select, dgvEmpresa);
+            Banco.CarregarDados(select, dgvEmpresa);
         }
 
         private void dgvEmpresa_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -64,6 +65,16 @@ namespace sys_bdourados
             {
                 Banco.ExcluirLinha("empresa", idSelecionado);
                 Banco.CarregarDados(select, dgvEmpresa);
+
+                idSelecionado = -1;
+
+                picFeedback.Image = sys_bdourados.Properties.Resources.info;
+                lblFeedback.Text = "Fique ligado, aqui você receberá dicas de como usar o sistema com eficiência ;)";
+            }
+            else
+            {
+                picFeedback.Image = sys_bdourados.Properties.Resources.exclamation;
+                lblFeedback.Text = "Para excluir selecione uma linha.";
             }
         }
     }
