@@ -40,7 +40,114 @@ namespace sys_bdourados
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao fazer consulta: \n\n" + ex);
+                Conexao.Close();
             }
+        }
+
+        public static object CarregarDadosObjeto(string tabela, object objeto)
+        {
+            try
+            {
+                Conexao.Open();
+
+                int i = 0;
+
+                string nome = char.ToUpper(tabela[0]) + tabela.Substring(1);
+
+                // key:value do ID do objeto
+                string chave = objeto.GetType().GetProperty("id"+nome).Name;
+                object valor = objeto.GetType().GetProperty("id" + nome).GetValue(objeto);
+
+                string query = "SELECT * FROM " + tabela + " WHERE " + chave + "=@" + chave;
+
+                MySqlCommand cmd = new MySqlCommand(query, Conexao);
+
+                cmd.Parameters.AddWithValue("@" + chave, valor);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                reader.Read();
+
+                PropertyInfo[] propriedades = objeto.GetType().GetProperties();
+
+
+                foreach (var prop in propriedades)
+                {
+                    // checa se é um horário e remove os segundos
+                    if (reader.GetString(i).Contains(":00"))
+                    {
+                        string hr = reader.GetString(i);
+                        prop.SetValue(objeto, hr.Remove(hr.Length - 3));
+                        i++;
+                    }
+                    else
+                    {
+                        prop.SetValue(objeto, reader.GetString(i));
+                        i++;
+                    }
+                }
+
+                Conexao.Close();
+
+                return objeto;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar dados: \n\n" + ex);
+                Conexao.Close();
+                return objeto;
+            }
+        }
+
+        public static void AtualizarDadosObjeto(string tabela, object objeto)
+        {
+            try
+            {
+                Conexao.Open();
+
+                string nome = char.ToUpper(tabela[0]) + tabela.Substring(1);
+
+                // método que concatena as chaves e valores do update
+                string Concatenar()
+                {
+                    string resultado = "";
+
+                    foreach (var prop in objeto.GetType().GetProperties())
+                    {
+                        // pular id e data de cadastro
+                        if (prop.Name.Remove(2) == "id" || prop.Name.Contains("dataCad"))
+                        {}
+                        else
+                        {
+                            resultado += (prop.Name + "=@" + prop.Name + ",");
+                        }
+                    }
+
+                    resultado = resultado.Remove(resultado.Length - 1);
+
+                    return resultado;
+                }
+
+                string update = "UPDATE " + tabela + " SET " + Concatenar() + " WHERE id" + nome + "=@" + "id"+ nome;
+
+                MySqlCommand cmd = new MySqlCommand(update, Conexao);
+
+                // repetição para dar valor aos parâmetros do update
+                foreach (var prop in objeto.GetType().GetProperties())
+                {
+                    cmd.Parameters.AddWithValue("@" + prop.Name, prop.GetValue(objeto));
+                }
+
+                cmd.ExecuteNonQuery();
+
+                Conexao.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao atualizar: \n\n" + ex);
+                Conexao.Close();
+            }
+
         }
 
         public static void ExcluirLinha(string tabela, int id)
@@ -76,6 +183,7 @@ namespace sys_bdourados
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao excluir campo: \n\n" + ex.Message);
+                Conexao.Close();
             }
         }
 
@@ -122,6 +230,7 @@ namespace sys_bdourados
             catch (MySqlException ex)
             {
                 MessageBox.Show("Erro ao cadastrar: \n\n" + ex);
+                Conexao.Close();
             }
         }
     }
