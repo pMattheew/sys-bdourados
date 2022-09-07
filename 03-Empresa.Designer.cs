@@ -119,6 +119,7 @@
             this.btnAtualizar.Text = "Atualizar dados da empresa";
             this.btnAtualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // btnCadastrar
             // 

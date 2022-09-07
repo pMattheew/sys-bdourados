@@ -14,6 +14,8 @@ namespace sys_bdourados
     {
         bool isShowingFone = false;
 
+        private string funcao, id;
+
         public class Empresa
         {
             public string idEmpresa { get; set; }
@@ -27,27 +29,55 @@ namespace sys_bdourados
             public string horarioAtendEmpresa { get; set; }
         }
 
-        public frmCadEmpresa()
+        public frmCadEmpresa(string funcionalidade, int idSelecionado = -1)
         {
+            id = idSelecionado.ToString();
+            funcao = funcionalidade;
             InitializeComponent();
         }
 
+        Empresa AtualizarEmpresa = new Empresa();
+        Empresa NovaEmpresa = new Empresa();
+
+        // navegação começo
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             new frmEmpresa().Show();
             Close();
         }
-
         private void minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
         private void close_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+        // navegação fim
 
+        private void frmCadEmpresa_Load(object sender, EventArgs e)
+        {
+            if (funcao == "ATUALIZAR")
+            {
+                void AutoPreencherCampos()
+                {
+                    inNome.Text = AtualizarEmpresa.nomeEmpresa;
+                    inRazao.Text = AtualizarEmpresa.razaoSocialEmpresa;
+                    inEmail.Text = AtualizarEmpresa.emailEmpresa;
+                    mkdCnpjCpf.Text = AtualizarEmpresa.cnpjCpfEmpresa;
+                    cmbHorario.Text = AtualizarEmpresa.horarioAtendEmpresa;
+                }
+
+                lblTitulo.Text = "Gerenciar empresas | atualizar dados da empresa";
+                btnCadastrar.Text = "Atualizar empresa";
+
+                AtualizarEmpresa.idEmpresa = id;
+
+                Banco.CarregarDadosObjeto("empresa", AtualizarEmpresa);
+
+                AutoPreencherCampos();
+            }
+        }
         // botão Adicionar telefone
         private void btnTelefone_Click(object sender, EventArgs e)
         {
@@ -118,6 +148,7 @@ namespace sys_bdourados
                 inObs.Clear();
             }
         }
+
         private void btnEnviarPic_Click(object sender, EventArgs e)
         {
 
@@ -237,33 +268,59 @@ namespace sys_bdourados
                 }
 
             }
-            
+
+            void DeclararCampos()
+            {
+                if (funcao == "CADASTRAR")
+                {
+                    NovaEmpresa.idEmpresa = "DEFAULT";
+                    NovaEmpresa.nomeEmpresa = inNome.Text;
+                    NovaEmpresa.cnpjCpfEmpresa = mkdCnpjCpf.Text;
+                    NovaEmpresa.razaoSocialEmpresa = inRazao.Text;
+                    NovaEmpresa.emailEmpresa = inEmail.Text;
+                    NovaEmpresa.bannerEmpresa = "DEFAULT";
+                    NovaEmpresa.statusEmpresa = "ATIVO";
+                    NovaEmpresa.dataCadEmpresa = DateTime.Now.ToString("yyyy-MM-dd");
+                    NovaEmpresa.horarioAtendEmpresa = cmbHorario.Text;
+                }
+                else if (funcao == "ATUALIZAR")
+                {
+                    AtualizarEmpresa.nomeEmpresa = inNome.Text;
+                    AtualizarEmpresa.razaoSocialEmpresa = inRazao.Text;
+                    AtualizarEmpresa.emailEmpresa = inEmail.Text;
+                    AtualizarEmpresa.cnpjCpfEmpresa = mkdCnpjCpf.Text;
+                    AtualizarEmpresa.horarioAtendEmpresa = cmbHorario.Text;
+                }
+            }
+
             picFeedback.Image = sys_bdourados.Properties.Resources.info;
-            lblFeedback.Text = "Cadastrando empresa...";
             picTab1.Visible = false;
             picTab2.Visible = false;
             picShift.Visible = false;
 
-            if (VerificarCampos())
+            if (funcao == "CADASTRAR" && VerificarCampos())
             {
-                Empresa NovaEmpresa = new Empresa()
-            {
-                idEmpresa = "DEFAULT",
-                nomeEmpresa = inNome.Text,
-                cnpjCpfEmpresa = mkdCnpjCpf.Text,
-                razaoSocialEmpresa = inRazao.Text,
-                emailEmpresa = inEmail.Text,
-                bannerEmpresa = "DEFAULT",
-                statusEmpresa = "ATIVO",
-                dataCadEmpresa = DateTime.Now.ToString("yyyy-MM-dd"),
-                horarioAtendEmpresa = cmbHorario.Text
-            };
+                lblFeedback.Text = "Cadastrando empresa...";
+
+                DeclararCampos();
 
                 Banco.InserirLinha("empresa", NovaEmpresa);
 
                 picFeedback.Image = sys_bdourados.Properties.Resources.check;
                 lblFeedback.Text = "Empresa cadastrada com sucesso!";
             }
+            else if (funcao == "ATUALIZAR" && VerificarCampos())
+            {
+                lblFeedback.Text = "Atualizando dados da empresa...";
+
+                DeclararCampos();
+
+                Banco.AtualizarDadosObjeto("empresa", AtualizarEmpresa);
+
+                picFeedback.Image = sys_bdourados.Properties.Resources.check;
+                lblFeedback.Text = "Dados da empresa atualizados com sucesso!";
+            }
         }
+
     }
 }

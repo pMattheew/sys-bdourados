@@ -26,7 +26,6 @@ namespace sys_bdourados
             new frmPainel().Show();
             Close();
         }
-
         private void minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -35,18 +34,16 @@ namespace sys_bdourados
         {
             Application.Exit();
         }
-
-        private void btnCadastrar_Click(object sender, EventArgs e)
-        {
-            new frmCadEmpresa().Show();
-            Hide();
-        }
         // navegação fim
 
         private void frmEmpresa_Load(object sender, EventArgs e)
         {
             Banco.CarregarDados(select, dgvEmpresa);
-            Banco.CarregarDados(select, dgvEmpresa);
+        }
+
+        private void dgvEmpresa_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dgvEmpresa.Columns["ID"].Visible = false;
         }
 
         private void dgvEmpresa_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -54,9 +51,24 @@ namespace sys_bdourados
             idSelecionado = Convert.ToInt32(dgvEmpresa[0, e.RowIndex].Value);
         }
 
-        private void dgvEmpresa_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            dgvEmpresa.Columns["ID"].Visible = false;
+            new frmCadEmpresa("CADASTRAR").Show();
+            Hide();
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            if (idSelecionado >= 0)
+            {
+                new frmCadEmpresa("ATUALIZAR", idSelecionado).Show();
+                Hide();
+            }
+            else
+            {
+                picFeedback.Image = sys_bdourados.Properties.Resources.exclamation;
+                lblFeedback.Text = "Para atualizar os dados de uma empresa selecione uma linha.";
+            }
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)

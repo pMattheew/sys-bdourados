@@ -654,6 +654,7 @@
             this.Name = "frmCadEmpresa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DouradosSys | Empresa";
+            this.Load += new System.EventHandler(this.frmCadEmpresa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picShift)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTab2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTab1)).EndInit();
