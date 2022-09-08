@@ -48,7 +48,10 @@ namespace sys_bdourados
 
         private void dgvEmpresa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            idSelecionado = Convert.ToInt32(dgvEmpresa[0, e.RowIndex].Value);
+            try
+            {
+                idSelecionado = Convert.ToInt32(dgvEmpresa[0, e.RowIndex].Value);
+            }catch{}
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
