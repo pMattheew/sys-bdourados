@@ -12,10 +12,30 @@ namespace sys_bdourados
 {
     public partial class frmCadServico : Form
     {
-        public frmCadServico()
+        private string funcao, id;
+
+        public class Servico
         {
+            public string idServico { get; set; }
+            public string nomeServico { get; set; }
+            public string descricaoServico { get; set; }
+            public string valorServico { get; set; }
+            public string statusServico { get; set; }
+            public string dataCadServico { get; set; }
+            public string tempoExecServico { get; set; }
+            public string idEmpresa { get; set; }
+        }
+        public frmCadServico(string funcionalidade, int idSelecionado = -1)
+        {
+            id = idSelecionado.ToString();
+            funcao = funcionalidade;
             InitializeComponent();
         }
+
+        Empresa AtualizarServico = new Servico();
+        Empresa NovoServico = new Servico();
+
+        // navegação começo
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             new frmServico().Show();
@@ -29,6 +49,31 @@ namespace sys_bdourados
         {
             Application.Exit();
         }
+        // navegação fim
+
+        /* ON LOAD FORM
+        
+            if (funcao == "ATUALIZAR")
+            {
+                void AutoPreencherCampos()
+                {
+                    inNome.Text = AtualizarServico.nomeServico;
+                    inDescricao.Text = AtualizarServico.descricaoServico;
+                    inValor.Text = AtualizarServico.valorServico;
+                    cmbTempoExec.Text = AtualizarServico.tempoExecServico;
+                }
+
+                lblTitulo.Text = "Gerenciar serviços | atualizar dados do serviço";
+                btnCadastrar.Text = "Atualizar serviço";
+
+                AtualizarServico.idServico = id;
+
+                Banco.CarregarDadosObjeto("servico", AtualizarServico);
+
+                AutoPreencherCampos();
+            }
+
+         */
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
