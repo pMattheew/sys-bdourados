@@ -54,23 +54,30 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.fundo = new System.Windows.Forms.Label();
-            this.btnVoltar = new System.Windows.Forms.PictureBox();
+            this.voltar = new System.Windows.Forms.PictureBox();
             this.minimize = new System.Windows.Forms.PictureBox();
             this.close = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblEmpresa = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbEmpresa = new System.Windows.Forms.ComboBox();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.inDescricao = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.lblNivel = new System.Windows.Forms.Label();
+            this.cmbNivel = new System.Windows.Forms.ComboBox();
+            this.lblHoras = new System.Windows.Forms.Label();
+            this.cmbHoras = new System.Windows.Forms.ComboBox();
+            this.picPerfil = new System.Windows.Forms.PictureBox();
+            this.btnEnviarFoto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picShift)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTab2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTab1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFeedback)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.voltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // picShift
@@ -127,10 +134,11 @@
             this.btnTelefone.Location = new System.Drawing.Point(630, 614);
             this.btnTelefone.Name = "btnTelefone";
             this.btnTelefone.Size = new System.Drawing.Size(240, 35);
-            this.btnTelefone.TabIndex = 39;
+            this.btnTelefone.TabIndex = 13;
             this.btnTelefone.Text = "Adicionar telefone";
             this.btnTelefone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTelefone.UseVisualStyleBackColor = false;
+            this.btnTelefone.Click += new System.EventHandler(this.btnTelefone_Click);
             // 
             // btnLimpar
             // 
@@ -142,10 +150,11 @@
             this.btnLimpar.Location = new System.Drawing.Point(330, 614);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(240, 35);
-            this.btnLimpar.TabIndex = 38;
+            this.btnLimpar.TabIndex = 12;
             this.btnLimpar.Text = "Limpar campos";
             this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnCadastrar
             // 
@@ -157,10 +166,11 @@
             this.btnCadastrar.Location = new System.Drawing.Point(30, 614);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(240, 35);
-            this.btnCadastrar.TabIndex = 37;
+            this.btnCadastrar.TabIndex = 11;
             this.btnCadastrar.Text = "Cadastrar funcionário";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // cmbOperadora
             // 
@@ -180,7 +190,7 @@
             this.cmbOperadora.Location = new System.Drawing.Point(338, 443);
             this.cmbOperadora.Name = "cmbOperadora";
             this.cmbOperadora.Size = new System.Drawing.Size(228, 35);
-            this.cmbOperadora.TabIndex = 34;
+            this.cmbOperadora.TabIndex = 5;
             this.cmbOperadora.Visible = false;
             // 
             // mkdFone
@@ -193,7 +203,7 @@
             this.mkdFone.Mask = "(00)00000-0000";
             this.mkdFone.Name = "mkdFone";
             this.mkdFone.Size = new System.Drawing.Size(209, 20);
-            this.mkdFone.TabIndex = 33;
+            this.mkdFone.TabIndex = 4;
             this.mkdFone.Visible = false;
             // 
             // lblOperadora
@@ -293,7 +303,7 @@
             this.inObs.Location = new System.Drawing.Point(47, 531);
             this.inObs.Name = "inObs";
             this.inObs.Size = new System.Drawing.Size(508, 20);
-            this.inObs.TabIndex = 36;
+            this.inObs.TabIndex = 6;
             this.inObs.Visible = false;
             // 
             // inSenha
@@ -305,7 +315,7 @@
             this.inSenha.Location = new System.Drawing.Point(47, 260);
             this.inSenha.Name = "inSenha";
             this.inSenha.Size = new System.Drawing.Size(508, 20);
-            this.inSenha.TabIndex = 32;
+            this.inSenha.TabIndex = 2;
             // 
             // inEmail
             // 
@@ -316,7 +326,7 @@
             this.inEmail.Location = new System.Drawing.Point(47, 180);
             this.inEmail.Name = "inEmail";
             this.inEmail.Size = new System.Drawing.Size(508, 20);
-            this.inEmail.TabIndex = 31;
+            this.inEmail.TabIndex = 1;
             // 
             // inNome
             // 
@@ -327,7 +337,7 @@
             this.inNome.Location = new System.Drawing.Point(47, 101);
             this.inNome.Name = "inNome";
             this.inNome.Size = new System.Drawing.Size(508, 20);
-            this.inNome.TabIndex = 30;
+            this.inNome.TabIndex = 0;
             // 
             // fndTel
             // 
@@ -385,17 +395,18 @@
             this.fundo.Size = new System.Drawing.Size(1200, 610);
             this.fundo.TabIndex = 45;
             // 
-            // btnVoltar
+            // voltar
             // 
-            this.btnVoltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.btnVoltar.Image = global::sys_bdourados.Properties.Resources.voltar;
-            this.btnVoltar.Location = new System.Drawing.Point(1080, 0);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(40, 40);
-            this.btnVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnVoltar.TabIndex = 42;
-            this.btnVoltar.TabStop = false;
+            this.voltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.voltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.voltar.Image = global::sys_bdourados.Properties.Resources.voltar;
+            this.voltar.Location = new System.Drawing.Point(1080, 0);
+            this.voltar.Name = "voltar";
+            this.voltar.Size = new System.Drawing.Size(40, 40);
+            this.voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.voltar.TabIndex = 42;
+            this.voltar.TabStop = false;
+            this.voltar.Click += new System.EventHandler(this.voltar_Click);
             // 
             // minimize
             // 
@@ -408,6 +419,7 @@
             this.minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.minimize.TabIndex = 43;
             this.minimize.TabStop = false;
+            this.minimize.Click += new System.EventHandler(this.minimize_Click);
             // 
             // close
             // 
@@ -420,6 +432,7 @@
             this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.close.TabIndex = 44;
             this.close.TabStop = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // label1
             // 
@@ -455,26 +468,25 @@
             this.lblEmpresa.TabIndex = 52;
             this.lblEmpresa.Text = "Empresa:";
             // 
-            // comboBox1
+            // cmbEmpresa
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Montserrat", 15F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.IntegralHeight = false;
-            this.comboBox1.ItemHeight = 27;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.cmbEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbEmpresa.Font = new System.Drawing.Font("Montserrat", 15F);
+            this.cmbEmpresa.FormattingEnabled = true;
+            this.cmbEmpresa.IntegralHeight = false;
+            this.cmbEmpresa.ItemHeight = 27;
+            this.cmbEmpresa.Items.AddRange(new object[] {
             "TIM",
             "VIVO",
             "CLARO",
             "OI",
             "NEXTEL"});
-            this.comboBox1.Location = new System.Drawing.Point(36, 334);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(530, 35);
-            this.comboBox1.TabIndex = 34;
-            this.comboBox1.Visible = false;
+            this.cmbEmpresa.Location = new System.Drawing.Point(36, 334);
+            this.cmbEmpresa.Name = "cmbEmpresa";
+            this.cmbEmpresa.Size = new System.Drawing.Size(530, 35);
+            this.cmbEmpresa.TabIndex = 3;
             // 
             // lblDescricao
             // 
@@ -498,7 +510,7 @@
             this.inDescricao.Multiline = true;
             this.inDescricao.Name = "inDescricao";
             this.inDescricao.Size = new System.Drawing.Size(508, 167);
-            this.inDescricao.TabIndex = 61;
+            this.inDescricao.TabIndex = 10;
             // 
             // label5
             // 
@@ -509,12 +521,103 @@
             this.label5.Size = new System.Drawing.Size(534, 192);
             this.label5.TabIndex = 62;
             // 
+            // lblNivel
+            // 
+            this.lblNivel.AutoSize = true;
+            this.lblNivel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.lblNivel.Font = new System.Drawing.Font("Montserrat", 11F);
+            this.lblNivel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.lblNivel.Location = new System.Drawing.Point(938, 69);
+            this.lblNivel.Name = "lblNivel";
+            this.lblNivel.Size = new System.Drawing.Size(161, 21);
+            this.lblNivel.TabIndex = 55;
+            this.lblNivel.Text = "Nível do funcionário:";
+            // 
+            // cmbNivel
+            // 
+            this.cmbNivel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.cmbNivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbNivel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbNivel.Font = new System.Drawing.Font("Montserrat", 15F);
+            this.cmbNivel.FormattingEnabled = true;
+            this.cmbNivel.IntegralHeight = false;
+            this.cmbNivel.ItemHeight = 27;
+            this.cmbNivel.Items.AddRange(new object[] {
+            "BARBEIRO",
+            "RH",
+            "ADMINISTRATIVO"});
+            this.cmbNivel.Location = new System.Drawing.Point(936, 94);
+            this.cmbNivel.Name = "cmbNivel";
+            this.cmbNivel.Size = new System.Drawing.Size(228, 35);
+            this.cmbNivel.TabIndex = 8;
+            // 
+            // lblHoras
+            // 
+            this.lblHoras.AutoSize = true;
+            this.lblHoras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.lblHoras.Font = new System.Drawing.Font("Montserrat", 11F);
+            this.lblHoras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.lblHoras.Location = new System.Drawing.Point(938, 164);
+            this.lblHoras.Name = "lblHoras";
+            this.lblHoras.Size = new System.Drawing.Size(203, 21);
+            this.lblHoras.TabIndex = 55;
+            this.lblHoras.Text = "Horas trabalhadas por dia:";
+            // 
+            // cmbHoras
+            // 
+            this.cmbHoras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.cmbHoras.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbHoras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbHoras.Font = new System.Drawing.Font("Montserrat", 15F);
+            this.cmbHoras.FormattingEnabled = true;
+            this.cmbHoras.IntegralHeight = false;
+            this.cmbHoras.ItemHeight = 27;
+            this.cmbHoras.Items.AddRange(new object[] {
+            "06:00",
+            "08:00",
+            "10:00",
+            "12:00",
+            "14:00",
+            "16:00"});
+            this.cmbHoras.Location = new System.Drawing.Point(936, 188);
+            this.cmbHoras.Name = "cmbHoras";
+            this.cmbHoras.Size = new System.Drawing.Size(228, 35);
+            this.cmbHoras.TabIndex = 9;
+            // 
+            // picPerfil
+            // 
+            this.picPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.picPerfil.Image = global::sys_bdourados.Properties.Resources.avatar;
+            this.picPerfil.Location = new System.Drawing.Point(690, 94);
+            this.picPerfil.Name = "picPerfil";
+            this.picPerfil.Size = new System.Drawing.Size(120, 120);
+            this.picPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPerfil.TabIndex = 64;
+            this.picPerfil.TabStop = false;
+            // 
+            // btnEnviarFoto
+            // 
+            this.btnEnviarFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btnEnviarFoto.Enabled = false;
+            this.btnEnviarFoto.FlatAppearance.BorderSize = 0;
+            this.btnEnviarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviarFoto.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.btnEnviarFoto.ForeColor = System.Drawing.Color.White;
+            this.btnEnviarFoto.Location = new System.Drawing.Point(630, 253);
+            this.btnEnviarFoto.Name = "btnEnviarFoto";
+            this.btnEnviarFoto.Size = new System.Drawing.Size(240, 35);
+            this.btnEnviarFoto.TabIndex = 7;
+            this.btnEnviarFoto.Text = "Enviar foto de perfil";
+            this.btnEnviarFoto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEnviarFoto.UseVisualStyleBackColor = false;
+            // 
             // frmCadFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(1200, 700);
+            this.Controls.Add(this.picPerfil);
             this.Controls.Add(this.lblDescricao);
             this.Controls.Add(this.inDescricao);
             this.Controls.Add(this.label5);
@@ -522,12 +625,17 @@
             this.Controls.Add(this.picTab2);
             this.Controls.Add(this.picTab1);
             this.Controls.Add(this.picFeedback);
+            this.Controls.Add(this.btnEnviarFoto);
             this.Controls.Add(this.btnTelefone);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbEmpresa);
+            this.Controls.Add(this.cmbHoras);
+            this.Controls.Add(this.cmbNivel);
             this.Controls.Add(this.cmbOperadora);
+            this.Controls.Add(this.lblHoras);
             this.Controls.Add(this.mkdFone);
+            this.Controls.Add(this.lblNivel);
             this.Controls.Add(this.lblOperadora);
             this.Controls.Add(this.lblTelefone);
             this.Controls.Add(this.lblObs);
@@ -546,7 +654,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.fundo);
-            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.voltar);
             this.Controls.Add(this.minimize);
             this.Controls.Add(this.close);
             this.Controls.Add(this.label1);
@@ -555,13 +663,15 @@
             this.Name = "frmCadFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DouradosSys | Funcionário";
+            this.Load += new System.EventHandler(this.frmCadFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picShift)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTab2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTab1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFeedback)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.voltar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -595,15 +705,21 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label fundo;
-        private System.Windows.Forms.PictureBox btnVoltar;
+        private System.Windows.Forms.PictureBox voltar;
         private System.Windows.Forms.PictureBox minimize;
         private System.Windows.Forms.PictureBox close;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblEmpresa;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbEmpresa;
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.TextBox inDescricao;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblNivel;
+        private System.Windows.Forms.ComboBox cmbNivel;
+        private System.Windows.Forms.Label lblHoras;
+        private System.Windows.Forms.ComboBox cmbHoras;
+        private System.Windows.Forms.PictureBox picPerfil;
+        private System.Windows.Forms.Button btnEnviarFoto;
     }
 }
