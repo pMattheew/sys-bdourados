@@ -12,6 +12,15 @@ namespace sys_bdourados
 {
     public partial class frmLogin : Form
     {
+        bool email = true;
+        public class Login
+        {
+            public string email { get; set; }
+            public string senha { get; set; }
+        }
+
+        Login login = new Login();
+
         public frmLogin()
         {
             InitializeComponent();
@@ -36,12 +45,9 @@ namespace sys_bdourados
 
         private void btnAvancar_Click(object sender, EventArgs e)
         {
-            variaveis.email = input.Text;
-
-            variaveis.senha = input.Text;
-
-            if (variaveis.email == "pms@gmail.com")
+            if (email)
             {
+                login.email = input.Text;
 
                 input.Clear();
 
@@ -49,13 +55,13 @@ namespace sys_bdourados
                 input.PasswordChar = '*';
                 btnAvancar.Text = "Acessar";
 
+                email = false;
+            }
+            else if (!email)
+            {
+                Banco.FazerLogin(login, frmLogin);
             }
 
-            if (variaveis.senha == "123")
-            {
-                new frmPainel().Show();
-                Hide();
-            }
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)

@@ -253,5 +253,68 @@ namespace sys_bdourados
                 Conexao.Close();
             }
         }
+
+        public static void FazerLogin(object objeto, frmLogin frmLogin)
+        {
+            try
+            {
+                Conexao.Open();
+
+                // método que concatena as chaves e valores do update
+                string Concatenar(bool where)
+                {
+                    string resultado = "";
+
+                    if (where)
+                    {
+                        foreach (var prop in objeto.GetType().GetProperties())
+                        {
+                            resultado += (prop.Name + "=@" + prop.Name + " AND ");
+                        }
+
+                        resultado = resultado.Remove(resultado.Length - 4);
+
+                        return resultado;
+                    }
+                    else
+                    {
+                        foreach (var prop in objeto.GetType().GetProperties())
+                        {
+                            resultado += (prop.Name + ",");
+                        }
+
+                        resultado = resultado.Remove(resultado.Length - 1);
+
+                        return resultado;
+                    }
+                }
+
+                string select = "SELECT "+ Concatenar(false) + " FROM funcionario WHERE" + Concatenar(true);
+
+                MySqlCommand cmd = new MySqlCommand(select, Conexao);
+
+
+                // repetição para dar valor aos parâmetros do select
+                foreach (var prop in objeto.GetType().GetProperties())
+                {
+                    cmd.Parameters.AddWithValue("@" + prop.Name, prop.GetValue(objeto));
+                }
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    new frmPainel().Show();
+                    frmLogin.Hide();
+                }
+
+                Conexao.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao fazer login, fale com o administrador do sistema: \n\n" + ex);
+                Conexao.Close();
+            }
+        }
     }
 }
