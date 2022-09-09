@@ -17,10 +17,19 @@ namespace sys_bdourados
         // Conexao.Open(); abre o banco de dados
         // Conexao.Close(); fecha o banco de dados
 
-        public static void CarregarDados(string query, DataGridView dgv)
+        public static void CarregarDados(string query, DataGridView dgv = null, ComboBox cmb = null, string tabela = null)
         {
             try
             {
+                if (dgv == null && cmb == null)
+                {
+                    throw new ArgumentNullException("O método deve receber ao menos uma DataGridView ou uma ComboBox e tabela.");
+                }
+                else if (cmb != null && tabela == null)
+                {
+                    throw new ArgumentNullException("É necessário definir o parâmetro tabela para carregar dados em uma ComboBox.");
+                }
+
                 Conexao.Open();
 
                 MySqlCommand cmd = new MySqlCommand(query, Conexao);  // gera a query
@@ -31,9 +40,20 @@ namespace sys_bdourados
 
                 da.Fill(dt); // enche a DataTable com os dados adaptados do banco de dados
 
+                if (dgv != null)
+                {
+                    dgv.DataSource = dt;
+                    dgv.ClearSelection();
+                }
+                else if (cmb != null)
+                {
+                    string Tabela = char.ToUpper(tabela[0]) + tabela.Substring(1);
 
-                dgv.DataSource = dt;
-                dgv.ClearSelection();
+                    cmb.DataSource = dt;
+                    cmb.DisplayMember = "nome" + Tabela;
+                    cmb.ValueMember = "id" + Tabela;
+                    cmb.SelectedIndex = -1;
+                }
 
                 Conexao.Close();
             }
