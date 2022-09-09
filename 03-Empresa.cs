@@ -83,8 +83,8 @@ namespace sys_bdourados
 
                 idSelecionado = -1;
 
-                picFeedback.Image = sys_bdourados.Properties.Resources.info;
-                lblFeedback.Text = "Fique ligado, aqui você receberá dicas de como usar o sistema com eficiência ;)";
+                picFeedback.Image = sys_bdourados.Properties.Resources.check;
+                lblFeedback.Text = "Empresa excluída com sucesso!";
             }
             else
             {
