@@ -55,7 +55,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnAPP2 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.picSair = new System.Windows.Forms.PictureBox();
@@ -199,6 +199,7 @@
             // btnDB2
             // 
             this.btnDB2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.btnDB2.Enabled = false;
             this.btnDB2.FlatAppearance.BorderSize = 0;
             this.btnDB2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDB2.Font = new System.Drawing.Font("Montserrat", 10F);
@@ -271,6 +272,7 @@
             // btnWeb1
             // 
             this.btnWeb1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.btnWeb1.Enabled = false;
             this.btnWeb1.FlatAppearance.BorderSize = 0;
             this.btnWeb1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWeb1.Font = new System.Drawing.Font("Montserrat", 10F);
@@ -286,6 +288,7 @@
             // btnWeb2
             // 
             this.btnWeb2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.btnWeb2.Enabled = false;
             this.btnWeb2.FlatAppearance.BorderSize = 0;
             this.btnWeb2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWeb2.Font = new System.Drawing.Font("Montserrat", 10F);
@@ -301,6 +304,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.button1.Enabled = false;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Montserrat", 10F);
@@ -316,6 +320,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.button2.Enabled = false;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Montserrat", 10F);
@@ -373,6 +378,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.button4.Enabled = false;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Montserrat", 10F);
@@ -386,25 +392,26 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // btnAPP2
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Montserrat", 10F);
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(586, 169);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(226, 32);
-            this.button5.TabIndex = 22;
-            this.button5.Text = "Cadastrar serviço";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnAPP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.btnAPP2.FlatAppearance.BorderSize = 0;
+            this.btnAPP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAPP2.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.btnAPP2.ForeColor = System.Drawing.Color.White;
+            this.btnAPP2.Location = new System.Drawing.Point(586, 169);
+            this.btnAPP2.Name = "btnAPP2";
+            this.btnAPP2.Size = new System.Drawing.Size(226, 32);
+            this.btnAPP2.TabIndex = 22;
+            this.btnAPP2.Text = "Cadastrar serviço";
+            this.btnAPP2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAPP2.UseVisualStyleBackColor = false;
+            this.btnAPP2.Click += new System.EventHandler(this.btnAPP2_Click);
             // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.button6.Enabled = false;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Montserrat", 10F);
@@ -508,7 +515,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnAPP2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label7);
@@ -589,7 +596,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnAPP2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label12;
     }

@@ -70,11 +70,6 @@ namespace sys_bdourados
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button6_Click(object sender, EventArgs e)
         {
 
@@ -100,6 +95,12 @@ namespace sys_bdourados
         private void btnDB1_Click(object sender, EventArgs e)
         {
             new frmFuncionario().Show();
+            Hide();
+        }
+
+        private void btnAPP2_Click(object sender, EventArgs e)
+        {
+            new frmCadServico("CADASTRAR").Show();
             Hide();
         }
     }
