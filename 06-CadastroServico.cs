@@ -13,6 +13,7 @@ namespace sys_bdourados
     public partial class frmCadServico : Form
     {
         private string funcao, id;
+        private string selectEmpresas = "SELECT idEmpresa, nomeEmpresa FROM empresa ORDER BY nomeEmpresa";
 
         public class Servico
         {
@@ -32,8 +33,8 @@ namespace sys_bdourados
             InitializeComponent();
         }
 
-        Empresa AtualizarServico = new Servico();
-        Empresa NovoServico = new Servico();
+        Servico AtualizarServico = new Servico();
+        Servico NovoServico = new Servico();
 
         // navegação começo
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -51,8 +52,8 @@ namespace sys_bdourados
         }
         // navegação fim
 
-        /* ON LOAD FORM
-        
+        private void frmCadServico_Load(object sender, EventArgs e)
+        {
             if (funcao == "ATUALIZAR")
             {
                 void AutoPreencherCampos()
@@ -61,6 +62,7 @@ namespace sys_bdourados
                     inDescricao.Text = AtualizarServico.descricaoServico;
                     inValor.Text = AtualizarServico.valorServico;
                     cmbTempoExec.Text = AtualizarServico.tempoExecServico;
+                    Banco.CarregarDados(selectEmpresas, null, cmbEmpresa, "empresa");
                 }
 
                 lblTitulo.Text = "Gerenciar serviços | atualizar dados do serviço";
@@ -72,9 +74,12 @@ namespace sys_bdourados
 
                 AutoPreencherCampos();
             }
+            else if (funcao == "CADASTRAR")
+            {
+                Banco.CarregarDados(selectEmpresas, null, cmbEmpresa, "empresa");
+            }
 
-         */
-
+        }
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             inNome.Clear();
@@ -164,7 +169,46 @@ namespace sys_bdourados
 
             }
 
-            VerificarCampos();
+            void DeclararCampos()
+            {
+                if (funcao == "CADASTRAR")
+                {
+                    NovoServico.idServico = "DEFAULT";
+                    NovoServico.nomeServico = inNome.Text;
+                    NovoServico.descricaoServico = inDescricao.Text;
+                    NovoServico.valorServico = inValor.Text;
+                    NovoServico.tempoExecServico = cmbTempoExec.Text;
+                    NovoServico.idEmpresa = Convert.ToString(cmbEmpresa.SelectedValue);
+                    NovoServico.dataCadServico = DateTime.Now.ToString("yyyy-MM-dd");
+                    NovoServico.statusServico = "ATIVO";
+                }
+                else if (funcao == "ATUALIZAR")
+                {
+                    AtualizarServico.nomeServico = inNome.Text;
+                    AtualizarServico.descricaoServico = inDescricao.Text;
+                    AtualizarServico.valorServico= inValor.Text;
+                    AtualizarServico.tempoExecServico= cmbTempoExec.Text;
+                    AtualizarServico.idEmpresa = Convert.ToString(cmbEmpresa.SelectedValue);
+                }
+            }
+
+            Feedback.tab(lblFeedback, picFeedback, picTab1, picTab2, picShift, false);
+
+            DeclararCampos();
+
+            if (funcao == "CADASTRAR" && VerificarCampos())
+            {
+                Banco.InserirLinha("servico", NovoServico);
+
+                Feedback.at(lblFeedback, picFeedback, "check", "Serviço cadastrado com sucesso!");
+            }
+            else if (funcao == "ATUALIZAR" && VerificarCampos())
+            {
+                Banco.AtualizarDadosObjeto("servico", AtualizarServico);
+
+                Feedback.at(lblFeedback, picFeedback, "check", "Dados do serviço atualizados com sucesso!");
+            }
+
         }
     }
 }

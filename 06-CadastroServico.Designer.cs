@@ -117,7 +117,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(330, 614);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(240, 35);
-            this.btnLimpar.TabIndex = 33;
+            this.btnLimpar.TabIndex = 6;
             this.btnLimpar.Text = "Limpar campos";
             this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLimpar.UseVisualStyleBackColor = false;
@@ -133,7 +133,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(30, 614);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(240, 35);
-            this.btnCadastrar.TabIndex = 32;
+            this.btnCadastrar.TabIndex = 5;
             this.btnCadastrar.Text = "Cadastrar serviço";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrar.UseVisualStyleBackColor = false;
@@ -186,7 +186,7 @@
             this.inDescricao.Multiline = true;
             this.inDescricao.Name = "inDescricao";
             this.inDescricao.Size = new System.Drawing.Size(508, 207);
-            this.inDescricao.TabIndex = 31;
+            this.inDescricao.TabIndex = 1;
             // 
             // inNome
             // 
@@ -196,8 +196,8 @@
             this.inNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.inNome.Location = new System.Drawing.Point(47, 101);
             this.inNome.Name = "inNome";
-            this.inNome.Size = new System.Drawing.Size(508, 20);
-            this.inNome.TabIndex = 30;
+            this.inNome.Size = new System.Drawing.Size(508, 23);
+            this.inNome.TabIndex = 0;
             // 
             // label2
             // 
@@ -307,8 +307,8 @@
             this.inValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.inValor.Location = new System.Drawing.Point(47, 455);
             this.inValor.Name = "inValor";
-            this.inValor.Size = new System.Drawing.Size(207, 20);
-            this.inValor.TabIndex = 49;
+            this.inValor.Size = new System.Drawing.Size(207, 23);
+            this.inValor.TabIndex = 2;
             // 
             // label5
             // 
@@ -360,7 +360,7 @@
             this.cmbTempoExec.Location = new System.Drawing.Point(338, 448);
             this.cmbTempoExec.Name = "cmbTempoExec";
             this.cmbTempoExec.Size = new System.Drawing.Size(228, 35);
-            this.cmbTempoExec.TabIndex = 52;
+            this.cmbTempoExec.TabIndex = 3;
             // 
             // lblTempoExec
             // 
@@ -388,7 +388,7 @@
             this.cmbEmpresa.Location = new System.Drawing.Point(36, 523);
             this.cmbEmpresa.Name = "cmbEmpresa";
             this.cmbEmpresa.Size = new System.Drawing.Size(228, 35);
-            this.cmbEmpresa.TabIndex = 52;
+            this.cmbEmpresa.TabIndex = 4;
             // 
             // frmCadServico
             // 
@@ -426,6 +426,7 @@
             this.Name = "frmCadServico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DouradosSys | Serviço";
+            this.Load += new System.EventHandler(this.frmCadServico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picShift)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTab2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTab1)).EndInit();
